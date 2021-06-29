@@ -1,12 +1,11 @@
-import React from 'react'
-import { Link, Route, Switch } from 'react-router-dom'
-import ComicBrowse from '../ComicBrowse/ComicBrowse'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <div>
       hello this is my home
-      <Link to="/browse">Browse All Comics</Link>
+      <Link to="/comics">Browse All Comics</Link>
     </div>
-  )
+  );
 }

@@ -1,14 +1,34 @@
-import React from 'react'
-import { Layout, ComicCards } from '../../components'
+import React from "react";
+import { Layout, ComicCards } from "../../components";
+import { useState, useEffect } from "react";
+import { getAllComics } from "../../services/comics";
+import "./ComicBrowse.css";
 
-//deleted props  
-export default function ComicBrowse() {
+const ComicBrowse = (props) => {
+  const [comics, setComics] = useState([]);
+
+  useEffect(() => {
+    const fetchComics = async () => {
+      const allComics = await getAllComics();
+      setComics(allComics);
+    };
+    fetchComics();
+  }, []);
+
   return (
-    // remvoed until needed from layout user={props.user}
-    <Layout >
-      <div className='comic-browse'>
-        <ComicCards />
+    <Layout>
+      <div className="comics">
+        <ComicCards
+          _id={comics._id}
+          title={comics.title}
+          imgURL={comics.imgURL}
+          price={comics.price}
+          brand={comics.brand}
+          description={comics.description}
+        />
       </div>
     </Layout>
-  )
-}
+  );
+};
+
+export default ComicBrowse;
