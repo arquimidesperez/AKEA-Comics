@@ -10,6 +10,7 @@ const ComicBrowse = (props) => {
   useEffect(() => {
     const fetchComics = async () => {
       const allComics = await getAllComics();
+      console.log(allComics);
       setComics(allComics);
     };
     fetchComics();
@@ -18,14 +19,18 @@ const ComicBrowse = (props) => {
   return (
     <Layout>
       <div className="comics">
-        <ComicCards
-          _id={comics._id}
-          title={comics.title}
-          imgURL={comics.imgURL}
-          price={comics.price}
-          brand={comics.brand}
-          description={comics.description}
-        />
+        {comics.map((comic) => {
+          return (
+            <ComicCards
+            _id={comic._id}
+            title={comic.title}
+            imgURL={comic.imgURL}
+            price={comic.price}
+            brand={comic.brand}
+            description={comic.description}
+          />
+          )
+        })}
       </div>
     </Layout>
   );
