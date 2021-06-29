@@ -6,26 +6,32 @@ import ComicCreate from './screens/ComicCreate/ComicCreate'
 import ComicEdit from './screens/ComicEdit/ComicEdit'
 import ComicDetail from './screens/ComicDetail/ComicDetail'
 import { Route, Switch, Redirect } from 'react-router-dom'
-// import { verifyUser } from './services/users'
+import { verifyUser } from './services/users'
 import SignUp from './screens/SignUp/SignUp'
 import Login from './screens/Login/Login'
 import Logout from './screens/Logout/Logout'
 
-// const App = () => {
-//   const [user, setUser] = useState(null)
+const App = () => {
+  const [user, setUser] = useState(null)
 
-//   useEffect(() => {
-//     const fetchUser = async () => {
-//       const user = await verifyUser()
-//       user ? setUser(user) : setUser(null)
-//     }
-//     fetchUser()
-//   }, [])
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
 
-function App() {
   return (
     <div className="App">
-        Hello!
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route exact path="/browse">
+          <ComicBrowse/>
+        </Route>
+      </Switch>
     </div>
   );
 }
