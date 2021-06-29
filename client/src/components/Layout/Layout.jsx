@@ -3,14 +3,13 @@ import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 
 //add props to layout 
-const Layout = () => (
+const Layout = (props) => (
   <div className='layout'>
 
      {/* removed until need user={props.user}   */}
       <Nav />
     <div className="layout-children">
-      hello
-          {/* removed until need {props.children} */}
+        {props.children}
       </div>
       <Footer />
   </div>

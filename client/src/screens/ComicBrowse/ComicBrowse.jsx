@@ -6,11 +6,9 @@ export default function ComicBrowse() {
   return (
     // remvoed until needed from layout user={props.user}
     <Layout >
-      <div className='home'>
-        hello ComicCards
+      <div className='comic-browse'>
         <ComicCards />
       </div>
     </Layout>
   )
 }
-

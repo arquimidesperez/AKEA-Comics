@@ -28,6 +28,15 @@ const App = () => {
         <Route exact path="/">
           <Home/>
         </Route>
+        <Route exact path="/create-comic">
+          <ComicCreate/>
+        </Route>
+        <Route exact path="/comic-details">
+          <ComicDetail/>
+        </Route>
+        <Route exact path="/edit-comic">
+          <ComicEdit/>
+        </Route>
         <Route exact path="/browse">
           <ComicBrowse/>
         </Route>
