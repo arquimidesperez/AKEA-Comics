@@ -40,6 +40,15 @@ const App = () => {
         <Route exact path="/comics">
           <ComicBrowse />
         </Route>
+        <Route exact path="/signup">
+          <SignUp />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/logout">
+          <Logout />
+        </Route>
       </Switch>
     </div>
   );

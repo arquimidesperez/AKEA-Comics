@@ -1,5 +1,6 @@
 // import './Nav.css'
 import { NavLink } from 'react-router-dom'
+import { Logout } from '../../screens/Logout/Logout'
 
 
 
@@ -12,6 +13,12 @@ const alwaysOptions = (
         <NavLink className="link" to="/comic-details">Details</NavLink>
         <br/>
         <NavLink className="link" to="/edit-comic">Edit</NavLink>
+        <br />
+        <NavLink className="link" to="/signup">Sign-Up</NavLink>
+        <br />
+        <NavLink className="link" to="/login">Login</NavLink>
+        <br />
+        <NavLink className="link" to="/logout">Logout</NavLink>
         <br/>
     </>
 )
