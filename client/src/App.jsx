@@ -29,7 +29,7 @@ const App = () => {
           <Home />
         </Route>
         <Route exact path="/create-comic">
-          <ComicCreate />
+          {/* {user ? <ComicCreate user={user} /> : < */}
         </Route>
         <Route exact path="/comic-details">
           <ComicDetail />
@@ -38,16 +38,16 @@ const App = () => {
           <ComicEdit />
         </Route>
         <Route exact path="/comics">
-          <ComicBrowse />
+          <ComicBrowse user={user} />
         </Route>
         <Route exact path="/signup">
-          <SignUp />
+          <SignUp setUser={setUser} />
         </Route>
         <Route exact path="/login">
-          <Login />
+          <Login setUser={setUser} />
         </Route>
         <Route exact path="/logout">
-          <Logout />
+          <Logout setUser={setUser} />
         </Route>
       </Switch>
     </div>
