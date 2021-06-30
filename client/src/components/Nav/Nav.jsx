@@ -1,7 +1,8 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
+// eslint-disable-next-line
 import { Logout } from "../../screens/Logout/Logout";
-
+// eslint-disable-next-line
 {/* <NavLink to="/edit-comic">Edit</NavLink> */ }
 
 

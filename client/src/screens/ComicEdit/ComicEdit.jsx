@@ -21,7 +21,7 @@ export default function ComicEdit(props) {
     }
     fetchComic()
   }, [id])
-
+// eslint-disable-next-line
   const handleChange = (e) => {
     const { name, value } = e.target
     setComic({
@@ -29,7 +29,7 @@ export default function ComicEdit(props) {
       [name]: value,
     })
   }
-
+// eslint-disable-next-line
   const handleSubmit = async (e) => {
     e.preventDefault()
     const updated = await updateComic(id, comic)
