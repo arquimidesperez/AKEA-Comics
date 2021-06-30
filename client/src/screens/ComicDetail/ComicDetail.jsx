@@ -1,5 +1,5 @@
-import React from 'react'
-import { useEffect, useState }  from 'react'
+import { useEffect, useState } from 'react'
+import './ComicDetail.css'
 import { Layout } from '../../components'
 // eslint-disable-next-line
 import { getComic, deleteComic } from '../../services/comics'
@@ -26,10 +26,22 @@ export default function ComicDetail(props) {
   }
 
   return (
-    // remvoed until needed from layout user={props.user}
-    <Layout >
-      <div className='comic-browse'>
-        hello from comic details
+    <Layout user={props.user}>
+      <div className='comic-details'>
+        <div className='comic-container'>
+          <div className='comicbook-cover'>
+            <img
+              className='comicbook-art'
+              src={comic.imgURL}
+              alt={comic.title}
+            />
+          </div>
+          <div className='comic-information'>
+            <div className='title'>{comic.title}</div>
+            <div className='description'>{comic.description}</div>
+            <div className='price'>{comic.price}</div>
+          </div>
+        </div>
       </div>
     </Layout>
   )
