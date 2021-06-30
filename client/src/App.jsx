@@ -6,7 +6,6 @@ import ComicBrowse from "./screens/ComicBrowse/ComicBrowse";
 import ComicCreate from "./screens/ComicCreate/ComicCreate";
 import ComicEdit from "./screens/ComicEdit/ComicEdit";
 import ComicDetail from "./screens/ComicDetail/ComicDetail";
-// eslint-disable-next-line
 import { Route, Switch, Redirect } from "react-router-dom";
 import { verifyUser } from "./services/users";
 import SignUp from "./screens/SignUp/SignUp";
@@ -31,9 +30,9 @@ const App = () => {
           <Home />
         </Route>
         <Route exact path="/create-comic">
-          {/* {user ? <ComicCreate user={user} /> : < */}
+          {user ? <ComicCreate user={user} /> : <Redirect to="/comics" />}
         </Route>
-        <Route exact path="/comic-details">
+        <Route exact path="/comics/:id">
           <ComicDetail />
         </Route>
         <Route exact path="/edit-comic">
