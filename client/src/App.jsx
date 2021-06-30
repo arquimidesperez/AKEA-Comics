@@ -2,9 +2,11 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Home from "./screens/Home/Home";
 import ComicBrowse from "./screens/ComicBrowse/ComicBrowse";
+// eslint-disable-next-line
 import ComicCreate from "./screens/ComicCreate/ComicCreate";
 import ComicEdit from "./screens/ComicEdit/ComicEdit";
 import ComicDetail from "./screens/ComicDetail/ComicDetail";
+// eslint-disable-next-line
 import { Route, Switch, Redirect } from "react-router-dom";
 import { verifyUser } from "./services/users";
 import SignUp from "./screens/SignUp/SignUp";

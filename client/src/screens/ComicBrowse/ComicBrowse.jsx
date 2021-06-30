@@ -19,7 +19,7 @@ const ComicBrowse = (props) => {
   return (
     <Layout user={props.user}>
       <div className="comics">
-        {comics.map((comic) => {
+        {comics.map((comic, index) => {
           return (
             <ComicCards
               _id={comic._id}
@@ -28,6 +28,7 @@ const ComicBrowse = (props) => {
               price={comic.price}
               brand={comic.brand}
               description={comic.description}
+              key = {index}
             />
           )
         })}
