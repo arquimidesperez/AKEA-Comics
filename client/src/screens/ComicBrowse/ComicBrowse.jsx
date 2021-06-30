@@ -17,18 +17,18 @@ const ComicBrowse = (props) => {
   }, []);
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="comics">
         {comics.map((comic) => {
           return (
             <ComicCards
-            _id={comic._id}
-            title={comic.title}
-            imgURL={comic.imgURL}
-            price={comic.price}
-            brand={comic.brand}
-            description={comic.description}
-          />
+              _id={comic._id}
+              title={comic.title}
+              imgURL={comic.imgURL}
+              price={comic.price}
+              brand={comic.brand}
+              description={comic.description}
+            />
           )
         })}
       </div>
