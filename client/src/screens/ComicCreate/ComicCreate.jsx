@@ -7,7 +7,7 @@ import { createComic } from '../../services/comics'
 export default function ComicCreate(props) {
   const [isCreated, setCreated] = useState(false)
 
-  const ComicCreate = (props) => {
+
     const [comic, setComic] = useState({
       title: '',
       description: '',
@@ -89,4 +89,4 @@ export default function ComicCreate(props) {
       </Layout>
     )
   }
-}
+
