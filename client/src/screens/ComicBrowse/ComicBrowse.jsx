@@ -6,6 +6,7 @@ import "./ComicBrowse.css";
 
 const ComicBrowse = (props) => {
   const [comics, setComics] = useState([]);
+  const [brand, setBrand] = useState("")
 
   useEffect(() => {
     const fetchComics = async () => {
@@ -16,9 +17,44 @@ const ComicBrowse = (props) => {
     fetchComics();
   }, []);
 
+  handleChange = (e) => {
+    const selection = e.target.value
+    
+    switch (selection) {
+      case 'Marvel':
+        setBrand()
+        
+        break;
+      case 'DC':
+        setBrand()
+        
+        break;
+      
+      case 'All':
+        setBrand()
+
+        break;
+      
+      default:
+        
+        break;
+        
+    }
+  }
+
+
+
   return (
     <Layout user={props.user}>
-      <div className="comics">
+      <form className="sort" onChange={handleChange}>
+        <label>Sort By:</label>
+        <select>
+          <option value="Marvel">Marvel</option>
+          <option value="DC">DC</option>
+          <option value="All">All Comics</option>
+        </select>
+      </form>
+      <div className="comics-card">
         {comics.map((comic, index) => {
           return (
             <ComicCards
