@@ -5,44 +5,29 @@ import { getAllComics } from "../../services/comics";
 import "./ComicBrowse.css";
 
 const ComicBrowse = (props) => {
+  const [apiData, setApiData] = useState([]);
   const [comics, setComics] = useState([]);
-  const [brand, setBrand] = useState("")
 
   useEffect(() => {
     const fetchComics = async () => {
       const allComics = await getAllComics();
       console.log(allComics);
+      setApiData(allComics);
       setComics(allComics);
     };
     fetchComics();
   }, []);
 
-  handleChange = (e) => {
-    const selection = e.target.value
-    
-    switch (selection) {
-      case 'Marvel':
-        setBrand()
-        
-        break;
-      case 'DC':
-        setBrand()
-        
-        break;
-      
-      case 'All':
-        setBrand()
-
-        break;
-      
-      default:
-        
-        break;
-        
+  const handleChange = (e) => {
+    const selection = e.target.value;
+    setComics(apiData);
+    if (selection !== "All") {
+      const filteredComics = apiData.filter(
+        (comic) => comic.brand === selection
+      );
+      setComics(filteredComics);
     }
-  }
-
-
+  };
 
   return (
     <Layout user={props.user}>
@@ -64,9 +49,9 @@ const ComicBrowse = (props) => {
               price={comic.price}
               brand={comic.brand}
               description={comic.description}
-              key = {index}
+              key={index}
             />
-          )
+          );
         })}
       </div>
     </Layout>
