@@ -1,10 +1,13 @@
 import React from 'react'
 import { useEffect, useState }  from 'react'
 import { Layout } from '../../components'
+// eslint-disable-next-line
 import { getComic, deleteComic } from '../../services/comics'
+// eslint-disable-next-line
 import { useParams, Link } from 'react-router-dom'
 
 export default function ComicDetail(props) {
+  // eslint-disable-next-line
   const [comic, setComic] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
