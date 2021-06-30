@@ -43,7 +43,7 @@ const insertData = async () => {
       imgURL:
         "https://www.comicburst.com/pub/media/wysiwyg/blog/superman-2018-1/superman-1-2018-ivan-reis--joe-prado-cover.jpg",
       price: "3.99",
-      brand: "",
+      brand: "DC",
       description: "The fallout from the Man of Steel miniseries has Clark Kent looking at the world through new eyes... with new ideas about what Superman could and should do for the city of Metropolis and the planet Earth. His first job? Getting the planet back out of the Phantom Zone!",
     },
     {
