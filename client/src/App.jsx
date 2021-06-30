@@ -33,7 +33,7 @@ const App = () => {
         <Route exact path="/create-comic">
           {/* {user ? <ComicCreate user={user} /> : < */}
         </Route>
-        <Route exact path="/comic-details">
+        <Route exact path="/comics/:id">
           <ComicDetail />
         </Route>
         <Route exact path="/edit-comic">
