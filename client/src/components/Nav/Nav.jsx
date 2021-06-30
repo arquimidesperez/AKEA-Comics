@@ -12,7 +12,7 @@ const Nav = ({ user }) => {
       <div className="nav">
         <NavLink to="/comics">Home</NavLink>
         <br />
-        {user ? (<NavLink className="create" to="/create-comic">Create</NavLink>) : (<NavLink className="create-greyed-out" to="/sign-up">Create</NavLink>)}
+        {user ? (<NavLink className="create" to="/create-comic">Create</NavLink>) : (<NavLink className="create-greyed-out" to="/signup">Create</NavLink>)}
         <br />
         {user ? `Welcome, ${user.username}` : <NavLink to="/signup">Sign Up</NavLink>}
         <br />
