@@ -1,4 +1,4 @@
-.comics-card{
+.comics-card {
   display: flex;
   flex-wrap: wrap;
 }
@@ -13,16 +13,14 @@ h1 {
 }
 a {
   text-decoration: none;
-  font-family: 'Comic Neue', cursive;
+  font-family: "Comic Neue", cursive;
   font-weight: bolder;
 }
 .sort {
   position: relative;
-  left: 100px;
-  margin-top: 20px ;
-  font-family: 'Comic Neue', cursive;
+  padding: 15px;
+  margin-left: 200px;
+  font-family: "Comic Neue", cursive;
   font-weight: bolder;
   cursor: pointer;
 }
-
-
