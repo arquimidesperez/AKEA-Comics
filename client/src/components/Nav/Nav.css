@@ -22,7 +22,7 @@ a:hover,
 .nav-div {
   display: flex;
   flex-direction: column;
-  background-color: #202020;
+  background-color: black;
 }
 
 .link-holder {
