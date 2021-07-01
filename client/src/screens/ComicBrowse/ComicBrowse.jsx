@@ -31,7 +31,7 @@ const ComicBrowse = (props) => {
 
   return (
     <Layout user={props.user}>
-      <h1>img placement</h1>
+      <h1>.</h1>
       <form className="sort" onChange={handleChange}>
         <label>Sort By: </label>
         <select>
