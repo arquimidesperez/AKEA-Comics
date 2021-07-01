@@ -1,0 +1,31 @@
+.purchase-comic{
+  background-color: #202020;
+  padding: 50px;
+}
+
+.purchase-container{
+  /* border: 3px green solid; */
+  width: fit-content;
+  background-color: red;
+  max-width: 70vw;
+  padding: 10px;
+  margin: 0px auto;
+}
+
+.comicbook-art{
+  max-width: 60vw;
+}
+
+.purchase-information{
+  margin: 20px 20px;
+
+  color: white;
+}
+
+.marvel{
+  background-color: red;
+}
+
+.dc{
+  background-color: blue;
+}

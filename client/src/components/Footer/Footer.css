@@ -1,6 +1,12 @@
 .footer-div{
   background-color: #202020;
   padding: 20px;
+  bottom: 0;
+  /* position: absolute; */
+  width: 100vw;
+  display: flex;
+  flex: 1;
+  margin-top: auto;
 }
 
 .copyright-info{
