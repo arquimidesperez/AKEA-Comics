@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(https://i.imgur.com/3aZ0gat.jpg);
+  height: 100vh;
+  z-index: 0;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 
 .landing-card {
@@ -9,5 +14,36 @@
   width: 80%;
   display: flex;
   flex-direction: column;
-  margin-top: 130px;
+  margin-top: 10vh;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(1px);
+}
+
+.landing-title{
+  font-family: 'Bangers', cursive;
+  font-size: 1.8em;
+  margin: 15px 0 0 0;
+  font-weight: 500;
+}
+
+.landing-body {
+  font-family: 'Comic Neue', cursive;
+  margin: 15px 0 0 0;
+}
+
+.landing-button {
+  background-color: #202020;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  width: 130px;
+  height: 30px;
+  margin: 15px auto;
+  
+}
+
+.landing-link-text {
+  font-family: 'Bangers', cursive;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
 }
