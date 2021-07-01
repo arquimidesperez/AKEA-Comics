@@ -1,0 +1,51 @@
+.comic-create {
+  background-color: #202020;
+  padding: 50px;
+}
+
+.create-form {
+  background-color: red;
+  max-width: 70vw;
+  margin: 0px auto;
+  padding: 10px;
+  box-shadow: 3px 3px 3px black;
+}
+
+.form-title {
+  color: white;
+  font-family: "Bangers", cursive;
+  text-shadow: 2px 2px black;
+  font-weight: 500;
+}
+
+.input-image-link {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.input-title {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.input-price {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.input-brand {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.textarea-description {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.submit-button {
+  background-color: black;
+  color: white;
+  font-family: "Bangers", cursive;
+  width: 100px;
+}
