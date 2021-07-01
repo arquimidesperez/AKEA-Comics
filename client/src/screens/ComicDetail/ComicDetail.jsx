@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import "./ComicDetail.css";
 import { Layout } from "../../components";
-// eslint-disable-next-line
 import { getComic, deleteComic } from "../../services/comics";
-// eslint-disable-next-line
 import { useParams, Link } from "react-router-dom";
 
 export default function ComicDetail(props) {
-  // eslint-disable-next-line
   const [comic, setComic] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
@@ -24,40 +21,36 @@ export default function ComicDetail(props) {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-  console.log(comic.id);
+
   return (
     <Layout user={props.user}>
-      <div className="comic-details">
-        <div className="comic-container">
-          <div className="comicbook-cover">
-            <img
-              className="comicbook-art"
-              src={comic.imgURL}
-              alt={comic.title}
-            />
+      <div className="detail-container">
+        <div className="detail-card">
+
+          <div className="detail-cover">
+            <img className="detail-art" src={comic.imgURL} alt={comic.title} />
           </div>
-          <div className="comic-information">
-            <div className="title">{comic.title}</div>
-            <div className="description">{comic.description}</div>
-            <div className="price">{comic.price}</div>
+
+          <div className="detail-information-card">
+            <div className="detail-title">{comic.title}</div>
+            <div className="detail-brand-price">Universe: {comic.brand} | Price: <span className="detail-price">${comic.price}</span></div>
           </div>
-        <div>
+
+          <div className="detail-purchase-card">
             <Link to={`/purchase/${id}`}>
-            <button>Purchase</button>
+              <button className="detail-purchase" >Purchase</button>
             </Link>
+          </div>
+
+          <div className="detail-description-card">
+            <div className="detail-description">{comic.description}</div>
+          </div>
         </div>
-        </div>
-        <Link to={`/edit-comic/${id}`}>
-          <button>Edit</button>
-        </Link>
-        <Link to="/comics">
-          <button
-            className="delete-button"
-            onClick={() => deleteComic(comic._id)}
-          >
-            Delete
-          </button>
-        </Link>
+      </div>
+
+      <div className="detail-buttons">
+        <Link to={`/edit-comic/${id}`}><button className="detail-edit">Edit</button></Link>
+        <Link to="/comics"><button className="detail-delete" onClick={() => deleteComic(comic._id)} >Delete</button></Link>
       </div>
     </Layout>
   );
