@@ -1,0 +1,28 @@
+.comic-image{
+  max-width: 25vw;
+}
+
+.comic-container{
+  display: flex;
+  background-color: red;
+  margin: 20px auto;
+  width: 30vw;
+  flex-wrap: wrap;
+
+}
+
+.comic-cards-individuals{
+  padding: 10px;
+}
+
+.comic-title{
+  font-size: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.comic-brand{
+  font-size: 10px;
+  text-decoration: none;
+  color: white;
+}
