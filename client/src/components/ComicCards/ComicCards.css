@@ -1,36 +1,42 @@
-.comic-image{
-  max-width: 25vw;
+.comic-image {
+  width: 165px;
+  height: 225px;
+
 }
 
-.comic-container{
+.comic-container {
+  font-family: "Comic Neue", cursive;
   display: flex;
-  background-color: #CD352D;
-  margin: 20px auto;
-  width: 40vw;
+  background-color: #cd352d;
+  margin: 10px auto;
+  width: 49vw;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.comic-cards-individuals{
+.comic-cards-individuals {
   padding: 10px;
 }
 
-.comic-title{
-  font-size: 10px;
+.comic-title {
+  font-size: 18px;
+  font-weight: bolder;
   text-decoration: none;
   color: white;
+  
 }
 
-.comic-brand{
-  font-size: 10px;
+.comic-brand {
+  font-size: 15px;
   text-decoration: none;
   color: white;
+  margin-left: 125px;
 }
 
 .dc {
-  background-color: #3477EA;
+  background-color: #3477ea;
 }
 
 .marvel {
-  background-color: #CD352D;
+  background-color: #cd352d;
 }
