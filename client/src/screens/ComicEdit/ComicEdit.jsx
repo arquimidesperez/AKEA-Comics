@@ -51,7 +51,18 @@ export default function ComicEdit(props) {
             src={comic.imgURL}
             alt={comic.name}
           />
-      </div>
+          <form onSubmit={handleSubmit}>
+            <input
+              className='edit-input-image-link'
+              placeholder='Image Link'
+              value={comic.imgURL}
+              name='imgURL'
+              required
+              onChange={handleChange}
+            />
+          </form>
+        </div>
+        </div>
     </Layout>
   )
 }                  
