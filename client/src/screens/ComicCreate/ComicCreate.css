@@ -4,7 +4,7 @@
 }
 
 .create-form {
-  background-color: red;
+  background-color: #CD352D;
   max-width: 70vw;
   margin: 0px auto;
   padding: 10px;
@@ -48,4 +48,14 @@
   color: white;
   font-family: "Bangers", cursive;
   width: 100px;
+}
+
+@media only screen and (min-width: 800px) {
+  .create-form {
+    background-color: #CD352D;
+    max-width: 60vw;
+    margin: 0px auto;
+    padding: 10px;
+    box-shadow: 3px 3px 3px black;
+  }
 }
