@@ -1,0 +1,89 @@
+.detail-container {
+  box-sizing: border-box;
+  background-color: #202020;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.detail-card {
+  background-color: red;
+  padding: 20px;
+}
+
+.detail-cover {
+  margin: 0 auto;
+  width: 200px;
+  height: 230px;
+  overflow: hidden;
+  border: 1px whitesmoke solid;
+  }
+
+.detail-art {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  object-fit:contain
+}
+
+.detail-information-card {
+  font-family: 'Marvel', sans-serif;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.detail-title {
+  font-size: 1.8rem;
+  margin: 10px
+}
+.detail-brand-price {
+  font-size: 1.2rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.detail-price {
+  font-size: 1.4rem
+}
+
+.detail-purchase-card {
+font-family: 'Bangers', cursive;
+}
+
+.detail-purchase {
+  background-color: #202020;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  font-family: 'Bangers', cursive;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.detail-description-card {
+  margin: 10px 0 0 0;
+  font-family: 'Marvel', sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.detail-description {
+  width: 80%;
+  font-family: 'Marvel', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.detail-buttons {
+  background-color: #202020;
+  
+}
+
+.detail-edit, .detail-delete {
+  background-color: #202020;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  font-family: 'Bangers', cursive;
+  color: white;
+  font-size: 1.2rem;
+
+}
