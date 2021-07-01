@@ -24,7 +24,7 @@ export default function ComicDetail(props) {
   if (!isLoaded) {
     return <h1>Loading...</h1>
   }
-
+console.log(comic.id)
   return (
     <Layout user={props.user}>
       <div className='comic-details'>
@@ -42,7 +42,12 @@ export default function ComicDetail(props) {
             <div className='price'>{comic.price}</div>
           </div>
         </div>
+        <Link to={`/edit-comic/${id}`}><button>Edit</button></Link>
+        <button>Delete</button>
+        
+      
       </div>
     </Layout>
+   
   )
 }
