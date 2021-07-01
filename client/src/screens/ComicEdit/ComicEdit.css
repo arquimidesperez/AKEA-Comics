@@ -4,10 +4,17 @@
 }
 
 .editor-container{
-  background-color: red;
   max-width: 70vw;
   padding: 10px;
   margin: 0px auto;
+}
+
+.marvel{
+  background-color: #CD352D;
+}
+
+.dc{
+  background-color: #3477EA;
 }
 
 .edit-product-image{
@@ -29,6 +36,11 @@
   width: 200px;
 }
 
+.input-brand{
+  margin: 10px auto;
+  width: 200px;
+}
+
 .editor-text{
   margin: 10px auto;
   font-family: 'Bangers', cursive;
@@ -46,4 +58,58 @@
   color: white;
   font-family: 'Bangers', cursive;
   width: 100px;
+}
+
+
+@media only screen and (min-width: 800px) {
+  .editor-container{
+    display: flex;
+    justify-content: space-around;
+    max-width: 50vw;
+  }
+
+  .edit-product-image{
+    max-width: 20vw;
+  }
+
+  .input-name{
+    margin: 10px auto;
+    width: 300px;
+  }
+  
+  .input-image-link{
+    margin: 10px auto;
+    width: 300px;
+  }
+  
+  .input-price{
+    margin: 10px auto;
+    width: 300px;
+  }
+
+  .input-brand{
+    margin: 10px auto;
+    width: 300px;
+  }
+  
+  .editor-text{
+    margin: 10px auto;
+    font-family: 'Bangers', cursive;
+    font-size: 26px;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-weight: 500;
+  }
+  
+  .textarea-description{
+    width: 300px;
+  }
+  
+  .save-button{
+    background-color: black;
+    color: white;
+    font-family: 'Bangers', cursive;
+    width: 100px;
+  }
+
 }

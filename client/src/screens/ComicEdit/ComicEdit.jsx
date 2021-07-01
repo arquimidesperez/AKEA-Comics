@@ -44,14 +44,19 @@ export default function ComicEdit(props) {
   return (
     <Layout user={props.user}>
       <div className="comic-edit">
-        <div className='editor-container'>
-          <h3 className='editor-text'>Update</h3>
+
+      <h3 className='editor-text'>Update</h3>
+        
+        <div className={comic.brand === 'Marvel' ? "editor-container marvel" : "editor-container dc"}>
             <div className="image-container">
               <img
                 className="edit-product-image"
                 src={comic.imgURL}
                 alt={comic.name}
               />
+            </div>
+          
+            <div className='edit-information'>
             <form onSubmit={handleSubmit}>
             <input
                 className="input-name"
@@ -62,8 +67,7 @@ export default function ComicEdit(props) {
                 autoFocus
                 onChange={handleChange}
               />
-              </form>
-            </div>
+            </form>
             <form className="edit-form" onSubmit={handleSubmit}>
             <input
                   className="input-image-link"
@@ -109,7 +113,11 @@ export default function ComicEdit(props) {
                 Save Changes
               </button>
           </form>
+            </div>
+            
+
         </div>
+        
       </div>
     </Layout>
   );
