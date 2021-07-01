@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function ComicCards(props) {
   return (
     <>
-        <div className='comic-container'>
+      <div className={props.brand === 'Marvel' ? "comic-container marvel" : "comic-container dc"} >
         <Link className="comic" to={`/comics/${props._id}`}>
           <div className='comic-cards-individuals'>
             <div className='comic-image-container'>
@@ -16,7 +16,7 @@ export default function ComicCards(props) {
               <div className="comic-brand">{props.brand}</div>
             </div>
           </div>
-      </Link>
+        </Link>
       </div>
     </>
   );

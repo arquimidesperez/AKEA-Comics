@@ -1,3 +1,4 @@
-.comic-cards{
+.comics-card{
   display: flex;
+  flex-wrap: wrap;
 }
