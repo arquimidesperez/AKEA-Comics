@@ -40,9 +40,9 @@ export default function ComicCreate(props) {
       <Layout user={props.user} >
         <div className='comic-create'>
           <form className='create-form' onSubmit={handleSubmit}>
-            <h2 className='form-title'>Add a New Comic Book</h2>
+            <h2 className='create-form-title'>Add a New Comic Book</h2>
             <input
-              className='input-title'
+              className='create-input-title'
               placeholder='Title'
               value={comic.title}
               name='title'
@@ -52,7 +52,7 @@ export default function ComicCreate(props) {
             />
             <br />
             <input
-              className='input-image-link'
+              className='create-input-image-link'
               placeholder='Image URL'
               value={comic.imgURL}
               name='imgURL'
@@ -61,7 +61,7 @@ export default function ComicCreate(props) {
             />
             <br />
             <input
-              className='input-price'
+              className='create-input-price'
               placeholder='Price'
               value={comic.price}
               name='price'
@@ -70,7 +70,7 @@ export default function ComicCreate(props) {
             />
             <br />
               <input
-                className='input-brand'
+                className='create-input-brand'
                 placeholder='Brand (DC or Marvel)'
                 value={comic.brand}
                 name='brand'
@@ -79,7 +79,7 @@ export default function ComicCreate(props) {
             />
             <br />
             <textarea
-              className='textarea-description'
+              className='create-textarea-description'
               rows={10}
               placeholder='Description'
               value={comic.description}
@@ -88,7 +88,7 @@ export default function ComicCreate(props) {
               onChange={handleChange}
             />
             <br />
-            <button type='submit' className='submit-button'>
+            <button type='submit' className='create-submit-button'>
               CREATE
             </button>
           </form>
