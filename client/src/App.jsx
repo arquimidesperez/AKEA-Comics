@@ -11,6 +11,7 @@ import { verifyUser } from "./services/users";
 import SignUp from "./screens/SignUp/SignUp";
 import Login from "./screens/Login/Login";
 import Logout from "./screens/Logout/Logout";
+import Purchase from "./screens/Purchase/Purchase";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -49,6 +50,9 @@ const App = () => {
         </Route>
         <Route exact path="/logout">
           <Logout setUser={setUser} />
+        </Route>
+        <Route exact path="/purchase/:id">
+          <Purchase />
         </Route>
       </Switch>
     </div>
