@@ -1,0 +1,75 @@
+.signup-container {
+  display:flex;
+  flex-direction: column;
+  background-image: url(https://i.imgur.com/CeAVEah.jpg);
+  align-items: center;
+  height: 100vh;
+  background-position-x: 50%;
+  background-size: 1300px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 75%;
+  height: 300px;
+  margin-top: 15vh;
+  padding-top: 20px;
+  background-color: rgba(255,255,255, 0.80);
+  backdrop-filter: blur(3px);
+}
+
+.signup-form-header {
+
+}
+
+.signup-username-div {
+  margin-top: 16px;
+}
+
+.signup-username-input {
+  width: 200px;
+  height: 25px;
+}
+
+.signup-email-div {
+  margin-top: 26px;
+  padding-bottom: 20px;
+}
+
+.signup-email-input {
+  width: 200px;
+  height: 25px;
+}
+
+.signup-password-div {
+  margin-bottom: 20px;
+}
+
+.signup-password-input {
+  width: 200px;
+  height: 25px;
+}
+
+.signup-confirm-password-input {
+  width: 200px;
+  height: 25px;
+}
+
+.signup-button {
+  width: 100px;
+  height: 33px;
+  font-family: 'Bangers', cursive;
+  border: none;
+  background-color: black;
+  color: white;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  border: none;
+}
+
+.signup-login-button {
+  width: 200px;
+  font-family: 'Bangers', cursive;
+  
+}
