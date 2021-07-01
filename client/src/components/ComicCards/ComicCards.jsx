@@ -13,8 +13,9 @@ export default function ComicCards(props) {
             </div>
             <div className='comic-info-container'>
               <div className="comic-title">{props.title}</div>
-              <div className="comic-brand">{props.brand}</div>
+  
             </div>
+            <div className="comic-brand">{props.brand}</div>
           </div>
         </Link>
       </div>
