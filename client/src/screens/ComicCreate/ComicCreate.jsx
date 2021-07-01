@@ -35,10 +35,19 @@ export default function ComicCreate(props) {
     }
 
     return (
-      // remvoed until needed from layout user={props.user}
-      <Layout >
-        <div className='comic-browse'>
+      
+      <Layout user={props.user} >
+        <div className='comic-create'>
           <form className='create-form' onSubmit={handleSubmit}>
+            <input
+              className='input-image-link'
+              placeholder='Image Link'
+              value={comic.imgURL}
+              name='imgURL'
+              required
+              onChange={handleChange}
+            />
+            <br />
             <input
               className='input-title'
               placeholder='Title'
@@ -48,6 +57,7 @@ export default function ComicCreate(props) {
               autoFocus
               onChange={handleChange}
             />
+            <br />
             <input
               className='input-price'
               placeholder='Price'
@@ -56,6 +66,16 @@ export default function ComicCreate(props) {
               required
               onChange={handleChange}
             />
+            <br />
+              <input
+                className='input-brand'
+                placeholder='DC or Marvel'
+                value={comic.brand}
+                name='brand'
+                required
+                onChange={handleChange}
+            />
+            <br />
             <textarea
               className='textarea-description'
               rows={10}
@@ -65,22 +85,7 @@ export default function ComicCreate(props) {
               required
               onChange={handleChange}
             />
-            <input
-              className='input-image-link'
-              placeholder='Image Link'
-              value={comic.imgURL}
-              name='imgURL'
-              required
-              onChange={handleChange}
-            />
-            <input
-              className='input-brand'
-              placeholder='DC or Marvel'
-              value={comic.brand}
-              name='brand'
-              required
-              onChange={handleChange}
-            />
+            <br />
             <button type='submit' className='submit-button'>
               Submit
             </button>
