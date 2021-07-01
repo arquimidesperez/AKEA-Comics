@@ -1,0 +1,11 @@
+.footer-div{
+  background-color: #202020;
+  padding: 20px;
+}
+
+.copyright-info{
+  color: white;
+  font-family: 'Bangers', cursive;
+  font-size: 24px;
+  text-align: left;
+}

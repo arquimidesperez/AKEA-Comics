@@ -1,0 +1,32 @@
+/**
+CSS rules to specify families
+font-family: 'Bangers', cursive;
+font-family: 'Comic Neue', cursive;
+font-family: 'Marvel', sans-serif;
+**/
+
+.nav-div{
+  border: 3px black solid;
+  display: flex;
+  flex: 1 1 auto;
+  padding: 20px;
+  background-color: #202020;
+}
+
+.nav-spacing{
+  margin: auto;
+  text-decoration: none;
+  font-family: 'Bangers', cursive;
+  color: white;
+}
+
+.nav-link{
+  text-decoration: none;
+  font-family: 'Bangers', cursive;
+  color: white;
+  font-size: 20px;
+}
+
+.logo{
+  font-size: 36px;
+}
