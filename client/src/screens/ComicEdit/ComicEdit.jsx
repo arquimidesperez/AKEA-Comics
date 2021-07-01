@@ -4,6 +4,7 @@ import { getComic, updateComic } from '../../services/comics'
 import { useParams, Redirect } from 'react-router-dom'
 
 export default function ComicEdit(props) {
+
   const [comic, setComic ] = useState({
     title: '',
     imgURL: '',
@@ -41,10 +42,15 @@ export default function ComicEdit(props) {
   }
 
   return (
-    // remvoed until needed from layout user={props.user}
-    <Layout >
-      <div className='comic-browse'>
-        hello from comic edit
+    
+    <Layout user={props.user} >
+      <div className='comic-edit'>
+      <div className='image-container'>
+          <img
+            className='edit-product-image'
+            src={comic.imgURL}
+            alt={comic.name}
+          />
       </div>
     </Layout>
   )

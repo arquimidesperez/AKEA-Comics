@@ -33,10 +33,10 @@ const App = () => {
           {user ? <ComicCreate user={user} /> : <Redirect to="/comics" />}
         </Route>
         <Route exact path="/comics/:id">
-          <ComicDetail />
+          <ComicDetail user={user} />
         </Route>
-        <Route exact path="/edit-comic">
-          <ComicEdit />
+        <Route exact path="/edit-comic/:id">
+        {user ? <ComicEdit user={user} /> : <Redirect to="/signup" />}
         </Route>
         <Route exact path="/comics">
           <ComicBrowse user={user} />
