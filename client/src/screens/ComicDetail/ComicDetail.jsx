@@ -41,6 +41,11 @@ export default function ComicDetail(props) {
             <div className="description">{comic.description}</div>
             <div className="price">{comic.price}</div>
           </div>
+        <div>
+            <Link to={`/purchase/${id}`}>
+            <button>Purchase</button>
+            </Link>
+        </div>
         </div>
         <Link to={`/edit-comic/${id}`}>
           <button>Edit</button>
