@@ -55,58 +55,63 @@ const SignUp = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Sign Up</button>
+      return <button className='signup-button' type='submit'>SIGN UP</button>
     }
   }
 
   const { username, email, password, passwordConfirmation } = form
 
   return (
-    <div className='form-container'>
-      <h3>Sign Up</h3>
-      <form onSubmit={onSignUp}>
-        <label>Username</label>
-        <input
-          required
-          type='text'
-          name='username'
-          value={username}
-          placeholder='Enter username'
-          onChange={handleChange}
-        />
-        <label>Email address</label>
-        <input
-          required
-          type='email'
-          name='email'
-          value={email}
-          placeholder='Enter email'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        <label>Password Confirmation</label>
-        <input
-          required
-          name='passwordConfirmation'
-          value={passwordConfirmation}
-          type='password'
-          placeholder='Confirm Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-      <button>
-      Already have an account?<Link to='/login'>Login</Link>
-      </button>
-
+    <div className='signup-container'>
+      <div className='signup-form'>
+        <h3 className='signup-form-header'>SIGN UP</h3>
+        <form onSubmit={onSignUp}>
+          <div className='signup-username-div'>
+            <input className='signup-username-input'
+              required
+              type='text'
+              name='username'
+              value={username}
+              placeholder='Enter username'
+              onChange={handleChange}
+            />
+          </div>
+          <br />
+          <input className='signup-email-input'
+            required
+            type='email'
+            name='email'
+            value={email}
+            placeholder='Enter email'
+            onChange={handleChange}
+          />
+          <br />
+          <input className='signup-password-input'
+            required
+            name='password'
+            value={password}
+            type='password'
+            placeholder='Password'
+            onChange={handleChange}
+          />
+          <br />
+          <div className='confirm-password-div'>
+          <input className='confirm-password-input'
+            required
+            name='passwordConfirmation'
+            value={passwordConfirmation}
+            type='password'
+            placeholder='Confirm Password'
+            onChange={handleChange}
+          />
+          </div>
+          {renderError()}
+        </form>
+        <br />
+        <button className='signup-login-button'>
+          Already have an account?<Link to='/login'> Login</Link>
+        </button>
+      </div>
     </div>
   )
 }
