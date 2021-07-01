@@ -2,3 +2,27 @@
   display: flex;
   flex-wrap: wrap;
 }
+h1 {
+  background-image: url("https://i.imgur.com/ceaSQ4tl.jpg?1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 230px;
+  margin: 0;
+  color: transparent;
+}
+a {
+  text-decoration: none;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bolder;
+}
+.sort {
+  position: relative;
+  left: 100px;
+  margin-top: 20px ;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+
