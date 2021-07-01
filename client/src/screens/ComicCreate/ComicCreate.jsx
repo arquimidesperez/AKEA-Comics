@@ -1,4 +1,5 @@
 import React from 'react'
+import './ComicCreate.css'
 import { Layout } from '../../components'
 import { useState } from 'react'
 import { Redirect } from 'react-router-dom'
@@ -39,15 +40,7 @@ export default function ComicCreate(props) {
       <Layout user={props.user} >
         <div className='comic-create'>
           <form className='create-form' onSubmit={handleSubmit}>
-            <input
-              className='input-image-link'
-              placeholder='Image Link'
-              value={comic.imgURL}
-              name='imgURL'
-              required
-              onChange={handleChange}
-            />
-            <br />
+            <h2 className='form-title'>Add a New Comic Book</h2>
             <input
               className='input-title'
               placeholder='Title'
@@ -55,6 +48,15 @@ export default function ComicCreate(props) {
               name='title'
               required
               autoFocus
+              onChange={handleChange}
+            />
+            <br />
+            <input
+              className='input-image-link'
+              placeholder='Image URL'
+              value={comic.imgURL}
+              name='imgURL'
+              required
               onChange={handleChange}
             />
             <br />
@@ -69,7 +71,7 @@ export default function ComicCreate(props) {
             <br />
               <input
                 className='input-brand'
-                placeholder='DC or Marvel'
+                placeholder='Brand (DC or Marvel)'
                 value={comic.brand}
                 name='brand'
                 required
@@ -87,7 +89,7 @@ export default function ComicCreate(props) {
             />
             <br />
             <button type='submit' className='submit-button'>
-              Submit
+              CREATE
             </button>
           </form>
         </div>

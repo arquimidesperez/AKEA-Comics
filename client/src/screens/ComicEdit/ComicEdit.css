@@ -1,0 +1,49 @@
+.comic-edit{
+  background-color: #202020;
+  padding: 20px;
+}
+
+.editor-container{
+  background-color: red;
+  max-width: 70vw;
+  padding: 10px;
+  margin: 0px auto;
+}
+
+.edit-product-image{
+  max-width: 60vw;
+}
+
+.input-name{
+  margin: 10px auto;
+  width: 200px;
+}
+
+.input-image-link{
+  margin: 10px auto;
+  width: 200px;
+}
+
+.input-price{
+  margin: 10px auto;
+  width: 200px;
+}
+
+.editor-text{
+  margin: 10px auto;
+  font-family: 'Bangers', cursive;
+  color: white;
+  text-shadow: 2px 2px black;
+  font-weight: 500;
+}
+
+.textarea-description{
+  width: 200px;
+}
+
+.save-button{
+  background-color: black;
+  color: white;
+  font-family: 'Bangers', cursive;
+  width: 100px;
+}
