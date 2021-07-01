@@ -4,7 +4,7 @@
 
 .comic-container{
   display: flex;
-  background-color: red;
+  background-color: #CD352D;
   margin: 20px auto;
   width: 40vw;
   flex-wrap: wrap;
@@ -28,9 +28,9 @@
 }
 
 .dc {
-  background-color: blue;
+  background-color: #3477EA;
 }
 
 .marvel {
-  background-color: red;
+  background-color: #CD352D;
 }

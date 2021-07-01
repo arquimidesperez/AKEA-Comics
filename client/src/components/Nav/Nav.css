@@ -16,7 +16,7 @@ font-family: 'Marvel', sans-serif;
 }
 
 a:hover,
-h2:hover {
+.logo:hover {
   color: yellow;
 }
 .nav-div {

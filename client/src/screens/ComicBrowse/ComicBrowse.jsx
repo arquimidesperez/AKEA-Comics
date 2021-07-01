@@ -35,9 +35,9 @@ const ComicBrowse = (props) => {
       <form className="sort" onChange={handleChange}>
         <label>Sort By: </label>
         <select>
+          <option value="All">All Comics</option>
           <option value="Marvel">Marvel</option>
           <option value="DC">DC</option>
-          <option value="All">All Comics</option>
         </select>
       </form>
       <div className="comics-card">
@@ -55,8 +55,7 @@ const ComicBrowse = (props) => {
           );
         })}
       </div>
-      </Layout>
-  
+    </Layout>
   );
 };
 
