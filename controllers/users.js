@@ -75,4 +75,28 @@ export const verify = async (req, res) => {
   }
 };
 
-// export const changePassword = async (req, res) => {};
+export const changePassword = async (req, res) => {
+  try {
+    const { email, oldPassword, newPassword } = req.body;
+    const user = await User.findOne({ email: email }).select(
+      "username email password_digest"
+    );
+    if (bcrypt.compare(oldPassword, user.password_digest)) {
+      user.password_digest = await bcrypt.hash(newPassword, SALT_ROUNDS);
+      await user.save();
+      const payload = {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        exp: parseInt(exp.getTime() / 1000),
+      };
+      const token = jwt.sign(payload, TOKEN_KEY);
+      res.status(201).json({ token });
+    } else {
+      res.status(401).send("Invalid Credentials");
+    }
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ error: error.message });
+  }
+};
