@@ -9,35 +9,24 @@
 
 .detail-card {
   width: 70vw;
-  padding: 20px;
+  padding: 0px;
   margin: 0 auto;
+  /* display: flex; */
 }
 
-.detail-cover {
-  margin: 0 auto;
-  width: 200px;
-  height: 230px;
-  overflow: hidden;
-  border: 1px whitesmoke solid;
-  }
-
 .detail-art {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  object-fit:contain
+  width: 60vw;
 }
 
 .detail-information-card {
   font-family: 'Marvel', sans-serif;
-  font-size: 16px;
-  width: 80%;
+  width: 60vw;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .detail-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin: 10px
 }
 .detail-brand-price {
@@ -64,15 +53,12 @@ font-family: 'Bangers', cursive;
 }
 
 .detail-description-card {
-  margin: 10px 0 0 0;
   font-family: 'Marvel', sans-serif;
   font-size: 1rem;
   display: flex;
-  justify-content: center;
 }
 
 .detail-description {
-  width: 80%;
   font-family: 'Marvel', sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -112,23 +98,27 @@ font-family: 'Bangers', cursive;
 
 @media only screen and (min-width: 800px) {
   .detail-card{
-      max-width: 60vw;
+      max-width: 70vw;
+      /* padding: 20px; */
+      margin: 0 auto;
+      display: flex;
   }
 
-  .detail-cover {
+  /* .detail-cover {
     margin: 0 auto;
     width: 300px;
     height: 345px;
     overflow: hidden;
     border: 1px whitesmoke solid;
-    }
+    } */
   
   .detail-art {
-    display: flex;
+    width: 20vw;
+    /* display: flex;
     justify-content: center;
-    width: 100%;
-    height: auto;
-    object-fit:contain
+    width: 100%; */
+    /* height: auto; */
+    /* object-fit:contain */
   }
 
   .detail-buttons{
@@ -149,25 +139,37 @@ font-family: 'Bangers', cursive;
     width: 8vw;
   }
 
+  /* details information card */
+  .detail-information-card{
+    width: 50vw;
+    margin: 0px auto;
+  }
+
   .detail-title {
-    font-size: 2.7rem;
+    font-size: 2rem;
     margin: 10px
   }
   .detail-brand-price {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin: 10px;
     font-weight: bold;
   }
+
+  .detail-purchase-card {
+    font-family: 'Bangers', cursive;
+    }
   
-  .detail-price {
-    font-size: 2.1rem
-  }
-  
-  .detail-description {
-    width: 80%;
+  .detail-description-card {
+    /* margin: 10px 0 0 0;
     font-family: 'Marvel', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: flex; */
+  }
+
+  .detail-description {
+    /* width: 20vw;
+    font-family: 'Marvel', sans-serif;
+    font-size: 1rem;
+    font-weight: bold; */
   }
 
   .detail-purchase {
@@ -176,7 +178,11 @@ font-family: 'Bangers', cursive;
     font-family: 'Bangers', cursive;
     color: white;
     padding: 5px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .detail-price {
+    font-size: 1.4rem
   }
 
 }
