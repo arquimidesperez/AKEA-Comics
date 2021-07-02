@@ -2,19 +2,23 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Home from "./screens/Home/Home";
 import ComicBrowse from "./screens/ComicBrowse/ComicBrowse";
-// eslint-disable-next-line
 import ComicCreate from "./screens/ComicCreate/ComicCreate";
 import ComicEdit from "./screens/ComicEdit/ComicEdit";
 import ComicDetail from "./screens/ComicDetail/ComicDetail";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { verifyUser } from "./services/users";
+// import { verifyUser } from "./services/users";
 import SignUp from "./screens/SignUp/SignUp";
 import Login from "./screens/Login/Login";
 import Logout from "./screens/Logout/Logout";
 import Purchase from "./screens/Purchase/Purchase";
+import { changePassword, verifyUser } from "./services/users";
+
+
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [form, setForm] = useState({});
+
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -23,6 +27,20 @@ const App = () => {
     };
     fetchUser();
   }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setForm((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = async () => {
+    // changePassword(form);
+    const testPassword = await changePassword(form);
+    console.log(testPassword);
+  };
 
   return (
     <div className="App">
@@ -53,6 +71,14 @@ const App = () => {
         </Route>
         <Route exact path="/purchase/:id">
           <Purchase user={user} />
+        </Route>
+        <Route exact path="/change-password">
+          <form onChange={handleChange} onSubmit={handleSubmit}>
+            <input type="text" placeholder="email" name="email" />
+            <input type="text" placeholder="Old Password" name="oldPassword" />
+            <input type="text" placeholder="New Password" name="newPassword" />
+            <button>Submit</button>
+          </form>
         </Route>
       </Switch>
     </div>

@@ -40,3 +40,12 @@ export const verifyUser = async () => {
   }
   return false
 }
+
+export const changePassword = async (data) => {
+  try {
+    const resp = await api.post("/change-password", data);
+    return resp.data;
+  } catch (error) {
+    throw error;
+  }
+};
