@@ -55,6 +55,7 @@
 **/
 
 @media only screen and (min-width: 800px) {
+  
   .landing-card {
     border: 2px solid black;
     width: 30vw;
