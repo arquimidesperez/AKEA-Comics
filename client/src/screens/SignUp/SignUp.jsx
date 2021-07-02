@@ -68,7 +68,7 @@ const SignUp = (props) => {
 
       <div className='signup-form'>
 
-        <h3 className='signup-form-header'>SIGN UP</h3>
+        <p className='signup-form-header'>SIGN UP</p>
 
         <form onSubmit={onSignUp}>
 
@@ -78,21 +78,23 @@ const SignUp = (props) => {
               type='text'
               name='username'
               value={username}
-              placeholder='Enter username'
+              placeholder='Username'
               onChange={handleChange}
             />
           </div>
 
-          <br />
+          <div className='signup-email-div'>
           <input className='signup-email-input'
             required
             type='email'
             name='email'
             value={email}
-            placeholder='Enter email'
+            placeholder='Email'
             onChange={handleChange}
-          />
-          <br />
+            />
+          </div>
+
+          <div className='signup-password-div'>
           <input className='signup-password-input'
             required
             name='password'
@@ -101,7 +103,8 @@ const SignUp = (props) => {
             placeholder='Password'
             onChange={handleChange}
           />
-          <br />
+          </div>
+
           <div className='confirm-password-div'>
           <input className='confirm-password-input'
             required
@@ -114,13 +117,11 @@ const SignUp = (props) => {
           </div>
           {renderError()}
 
-        </form>
-
-        <br />
-
+          <p className='account-ask'>Already have an account?</p>
         <button className='signup-login-button'>
-          <Link className='signup-to-login-link' to='/login'>Already have an account? Login</Link>
+          <Link className='signup-to-login-link' to='/login'>Login</Link>
         </button>
+        </form>
       </div>
       </div>
     </Layout>

@@ -12,36 +12,47 @@
   display: flex;
   flex-direction: column;
   border: 3px solid black;
-  width: 75%;
-  height: 230px;
+  width: 70vw;
+  height: 25vh;
   margin-top: 15vh;
   background-color: rgba(255,255,255, 0.80);
   backdrop-filter: blur(3px);
+  justify-content: space-evenly;
+}
+
+.login-form-header{
+  font-family: 'Marvel', cursive;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .login-email-div {
-  margin-top: 26px;
+  margin-bottom: 10px;
 }
 
 .login-email-input {
   width: 200px;
-  height: 25px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
 .login-password-div {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .login-password-input {
   width: 200px;
-  height: 25px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
 .login-button {
   width: 100px;
   height: 33px;
   font-family: 'Bangers', cursive;
-  font-size: 18px;
+  font-size: 1rem;
   background-color: black;
   color: white;
   clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
@@ -55,15 +66,46 @@
 **/
 
 @media only screen and (min-width: 800px) {
+
   .login-form {
     display: flex;
     flex-direction: column;
     border: 3px solid black;
     width: 25vw;
-    height: 230px;
+    height: 30vh;
     margin-top: 15vh;
     background-color: rgba(255,255,255, 0.80);
     backdrop-filter: blur(1px);
+    justify-content: space-evenly;
   }
+
+  .login-form-header{
+    font-family: 'Marvel', cursive;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .login-email-div {
+    margin-bottom: 15px;
+  }
+  
+  .login-email-input {
+    width: 200px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  
+  .login-password-div {
+    margin-bottom: 15px;
+  }
+  
+  .login-password-input {
+    width: 200px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
 }
 
