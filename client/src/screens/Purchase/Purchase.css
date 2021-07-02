@@ -60,6 +60,14 @@
     max-width: 250px;
     font-family: "Marvel", sans-serif;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .purchase-info-conditional {
+    max-width: 90%
   }
 
   .comic-title-purchase {

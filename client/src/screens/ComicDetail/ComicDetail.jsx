@@ -52,10 +52,10 @@ export default function ComicDetail(props) {
             <Link to={`/edit-comic/${id}`}><button className="detail-edit">Edit</button></Link>
           </div>
           <div>
-            <Link to="/comics"><button className="detail-delete" onClick={() => deleteComic(comic._id)} >Delete</button></Link>    
+            <Link to="/comics"><button className="detail-delete" onClick={() => deleteComic(comic._id)} >Delete</button></Link>
           </div>
-      </div>
-        
+        </div>
+
       </div>
     </Layout>
   );
