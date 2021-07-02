@@ -26,7 +26,7 @@ export default function Purchase(props) {
   }
   console.log(comic.id);
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user}> 
       <div className="purchase-comic">
         <div className={comic.brand === 'Marvel' ? "purchase-container marvel" : "purchase-container dc"}>
           <div className="comicbook-cover">

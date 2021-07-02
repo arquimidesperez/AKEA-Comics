@@ -43,7 +43,7 @@ export default function ComicDetail(props) {
             <div className="detail-purchase-card">
               <Link to={`/purchase/${id}`}>
                 <button className="detail-purchase">Buy Now</button>
-              </Link>
+              </Link> 
             </div>
 
             <div className="detail-description-card">
