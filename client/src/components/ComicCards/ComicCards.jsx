@@ -5,11 +5,24 @@ import { Link } from "react-router-dom";
 export default function ComicCards(props) {
   return (
     <>
-      <Link className="comic" to={`/comics/${props._id}`}>
-        <img className="comic-image" src={props.imgURL} alt={props.title} />
-        <div className="comic-title">{props.title}</div>
-        <div className="comic-brand">{props.brand}</div>
-      </Link>
+      <div className={props.brand === 'Marvel' ? "comic-container marvel" : "comic-container dc"} >
+        <Link className="comic" to={`/comics/${props._id}`}>
+
+          <div className='comic-cards-individuals'>
+            {/* <div className='comic-image-container'> */}
+            <img className="comic-image" src={props.imgURL} alt={props.title} />
+            {/* </div> */}
+
+            <div className='comic-info-container'>
+              <div className="comic-title">{props.title}</div>
+              {/* <div className="comic-brand">{props.brand}</div> */}
+
+            </div>
+
+          </div>
+
+        </Link>
+      </div>
     </>
   );
 }

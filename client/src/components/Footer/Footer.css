@@ -1,0 +1,17 @@
+.footer-div{
+  background-color: black;
+  padding: 20px;
+  bottom: 0;
+  position: sticky;
+  width: 100vw;
+  display: flex;
+  flex: 1;
+  margin-top: auto;
+}
+
+.copyright-info{
+  color: white;
+  font-family: 'Bangers', cursive;
+  font-size: 24px;
+  text-align: left;
+}

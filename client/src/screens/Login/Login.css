@@ -1,0 +1,111 @@
+.login-container {
+  display:flex;
+  flex-direction: column;
+  background-image: url(https://i.imgur.com/4xPLGeS.jpg);
+  align-items: center;
+  height: 100vh;
+  background-position-x: 50%;
+  background-size: 1430px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 70vw;
+  height: 25vh;
+  margin-top: 15vh;
+  background-color: rgba(255,255,255, 0.80);
+  backdrop-filter: blur(3px);
+  justify-content: space-evenly;
+}
+
+.login-form-header{
+  font-family: 'Marvel', cursive;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login-email-div {
+  margin-bottom: 10px;
+}
+
+.login-email-input {
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.login-password-div {
+  margin-bottom: 10px;
+}
+
+.login-password-input {
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.login-button {
+  width: 100px;
+  height: 33px;
+  font-family: 'Bangers', cursive;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  border: none;
+}
+
+/**
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
+**/
+
+@media only screen and (min-width: 800px) {
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    width: 25vw;
+    height: 30vh;
+    margin-top: 15vh;
+    background-color: rgba(255,255,255, 0.80);
+    backdrop-filter: blur(1px);
+    justify-content: space-evenly;
+  }
+
+  .login-form-header{
+    font-family: 'Marvel', cursive;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .login-email-div {
+    margin-bottom: 15px;
+  }
+  
+  .login-email-input {
+    width: 200px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  
+  .login-password-div {
+    margin-bottom: 15px;
+  }
+  
+  .login-password-input {
+    width: 200px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+}
+

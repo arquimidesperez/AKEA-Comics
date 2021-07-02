@@ -1,0 +1,156 @@
+.comic-create {
+  background-color: #202020;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.create-form {
+  margin: 0px auto;
+  background-color: #cd352d;
+  width: 70vw;
+  padding: 25px 10px 25px 10px;
+  box-shadow: 3px 3px 3px black;
+}
+
+.create-form-title {
+  color: white;
+  font-family: "Bangers", cursive;
+  text-shadow: 2px 2px black;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.create-input-image-link {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-title {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-price {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-brand {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-textarea-description {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.create-submit-button {
+  width: 100px;
+  height: 33px;
+  font-family: 'Bangers', cursive;
+  border: none;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+}
+
+/**
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
+**/
+
+@media only screen and (min-width: 800px) {
+
+  .comic-create {
+    background-image: url(https://cdn.wallpapersafari.com/12/66/KoreDc.jpg);
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+  }
+
+  .create-form {
+    margin: 0px auto;
+    background-color: #cd352d;
+    width: 30vw;
+    height: 70vh;
+    padding: 25px 10px 25px 10px;
+    box-shadow: 3px 3px 3px black;
+    /* background-color: #cd352d;
+    width: 40vw;
+    height: 80vh;
+    margin: 0px auto;
+    box-shadow: 3px 3px 3px black;
+    margin: 0 auto;
+    justify-content: space-evenly; */
+  }
+
+  /* edit these */
+
+  .create-form-title {
+    color: white;
+    font-size: 36px;
+    font-family: "Bangers", cursive;
+    text-shadow: 2px 2px black;
+    font-size: 2.3rem;
+    font-weight: 500;
+  }
+
+  .create-input-image-link {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-title {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-price {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-brand {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-textarea-description {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .create-submit-button {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-family: "Bangers", cursive;
+    width: 100px;
+  }
+}

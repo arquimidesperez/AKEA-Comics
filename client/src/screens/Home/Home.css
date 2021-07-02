@@ -2,12 +2,111 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(https://i.imgur.com/3aZ0gat.jpg);
+  height: 100vh;
+  z-index: 0;
+  background-position-x: 50%;
+  background-position-y: 50%;
 }
 
 .landing-card {
   border: 2px solid black;
-  width: 80%;
+  width: 70vw;
+  height: 20vh;
   display: flex;
+  padding: 5px;
   flex-direction: column;
-  margin-top: 130px;
+  margin-top: 12vh;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(1px);
+  justify-content: space-evenly;
+}
+
+.landing-title{
+  font-family: 'Bangers', cursive;
+  font-size: 1.6rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.landing-body {
+  font-family: 'Marvel', cursive;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.landing-button {
+  width: 150px;
+  height: 33px;
+  color: white;
+  border: none;
+  background-color: black;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  padding: 7px;
+  margin: 0px auto;
+}
+
+.landing-link-text {
+  font-family: 'Bangers', cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+}
+
+/**
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
+**/
+
+@media only screen and (min-width: 800px) {
+  
+  .landing-card {
+    border: 2px solid black;
+    width: 30vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30vh;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(1px);
+  }  
+
+  .landing-container {
+    align-items: center;
+    background-image: url(https://i.imgur.com/3aZ0gat.jpg);
+    background-size: cover;
+  }
+
+  .landing-title{
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-weight: 500;
+  }
+  
+  .landing-body {
+    font-family: 'Marvel', cursive;
+    font-size: 1.4rem;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  
+  .landing-button {
+    width: 150px;
+    height: 33px;
+    color: white;
+    border: none;
+    background-color: black;
+    clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+    padding: 7px;
+    margin: 0px auto;
+  }
+
 }

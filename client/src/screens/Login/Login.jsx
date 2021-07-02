@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './Login.css'
+// import Nav from '../Nav/Nav'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
+import { Layout } from "../../components";
 
 const Login = (props) => {
   const history = useHistory()
@@ -47,37 +49,50 @@ const Login = (props) => {
         </button>
       )
     } else {
-      return <button type='submit'>Login</button>
+      return <button type='submit' className='login-button'>LOGIN</button>
     }
   }
 
   const { email, password } = form
 
   return (
-    <div className='form-container'>
-      <h3>Log In</h3>
-      <form onSubmit={onLogin}>
-        <label>Email</label>
-        <input
-          required
-          type='text'
-          name='email'
-          value={email}
-          placeholder='Enter Email'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-    </div>
+    <Layout>
+    <div className='login-container'>
+        
+        <div className='login-form'>
+
+        <p className='login-form-header'>LOGIN</p>
+          
+          <form onSubmit={onLogin}>
+            
+          <div className='login-email-div'>
+            <input className='login-email-input' 
+              required
+              type='text'
+              name='email'
+              value={email}
+              placeholder='Email'
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className='login-password-div'>
+            <input className='login-password-input'
+              required
+              name='password'
+              value={password}
+              type='password'
+              placeholder='Password'
+              onChange={handleChange}
+            />
+            </div>
+            
+            {renderError()}
+            
+        </form>
+      </div>
+      </div>
+    </Layout>
   )
 }
 
