@@ -1,13 +1,8 @@
 .comic-create {
-  /* https://i.pinimg.com/originals/2e/d8/20/2ed82058f206795b9127ee2d35aecad0.jpg */
-  /* http://3.bp.blogspot.com/-6d8vCS-2hwU/UBoIwA5ZuVI/AAAAAAAAMio/SoEloca91Bk/s1600/Action+One+Wallpaper.jpg */
-  background-image: url(https://i.pinimg.com/originals/2e/d8/20/2ed82058f206795b9127ee2d35aecad0.jpg);
-  background-size: cover;
-  padding-top: 70px;
-  padding-bottom: 70px;
-  display: flex;
+  background-color: #202020;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
 
 .create-form {
   margin: 0px auto;
@@ -79,6 +74,15 @@
 **/
 
 @media only screen and (min-width: 800px) {
+
+  .comic-create {
+    background-image: url(https://cdn.wallpapersafari.com/12/66/KoreDc.jpg);
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+  }
+
   .create-form {
     margin: 0px auto;
     background-color: #cd352d;

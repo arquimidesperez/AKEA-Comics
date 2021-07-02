@@ -25,37 +25,50 @@ export default function ComicDetail(props) {
   return (
     <Layout user={props.user}>
       <div className="detail-container">
-        <div className={comic.brand === 'Marvel' ? "detail-card marvel" : "detail-card dc"}>
-
+        <div
+          className={comic.brand === "Marvel" ? "detail-card marvel" : "detail-card dc"}>
+          
           <div className="detail-cover">
             <img className="detail-art" src={comic.imgURL} alt={comic.title} />
           </div>
 
-          <div className="detail-information-card">
+
+            <div className="detail-information-card">
+
             <div className="detail-title">{comic.title}</div>
-            <div className="detail-brand-price">Universe: {comic.brand} | Price: <span className="detail-price">${comic.price}</span></div>
-          </div>
+              <div className="detail-brand-price">
+                Universe: {comic.brand} <br/> Price:{" "} <span className="detail-price">${comic.price}</span>
+              </div>
 
-          <div className="detail-purchase-card">
-            <Link to={`/purchase/${id}`}>
-              <button className="detail-purchase" >Buy Now</button>
-            </Link>
-          </div>
+            <div className="detail-purchase-card">
+              <Link to={`/purchase/${id}`}>
+                <button className="detail-purchase">Buy Now</button>
+              </Link>
+            </div>
 
-          <div className="detail-description-card">
-            <div className="detail-description">{comic.description}</div>
+            <div className="detail-description-card">
+              <div className="detail-description">{comic.description}</div>
+            </div>
           </div>
-        </div>
+          </div>
+        
 
-        <div className="detail-buttons">
-          <div>
-            <Link to={`/edit-comic/${id}`}><button className="detail-edit">Edit</button></Link>
-          </div>
-          <div>
-            <Link to="/comics"><button className="detail-delete" onClick={() => deleteComic(comic._id)} >Delete</button></Link>
-          </div>
-        </div>
+                                  <div className="detail-buttons">
 
+                                    <div>
+                                      <Link to={`/edit-comic/${id}`}>
+                                        <button className="detail-edit">Edit</button>
+                                      </Link>
+                                    </div>
+
+                                    <div>
+                                      <Link to="/comics">
+                                        <button className="detail-delete" onClick={() => deleteComic(comic._id)}>Delete </button>
+                                      </Link>
+                                    </div>
+
+                                  </div>
+        
       </div>
     </Layout>
   );
