@@ -10,7 +10,7 @@ export default function Home() {
           WELCOME TO AKEA COMICS
         </h3>
         <p className="landing-body">
-          <strong>Where the DC and Marvel universes collide.  Buy, sell, or browse all your favorites here!</strong>
+          <strong>Where the DC and Marvel universes collide. <br/> Buy, sell, or browse all your favorites here!</strong>
         </p>
         <button className="landing-button">
           <Link className="landing-link-text" to="/comics">Browse All Comics</Link>

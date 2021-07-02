@@ -39,7 +39,8 @@ export default function ComicCreate(props) {
       
       <Layout user={props.user} >
         <div className='comic-create'>
-          <form className='my-create-form' onSubmit={handleSubmit}>
+
+            <form className='create-form' onSubmit={handleSubmit}>
             <div className='create-form-title'>Add a New Comic Book</div>
             <input
               className='create-input-title'
@@ -92,7 +93,10 @@ export default function ComicCreate(props) {
               CREATE
             </button>
           </form>
-        </div>
+              
+          </div>
+
+
       </Layout>
     )
   }
