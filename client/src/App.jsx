@@ -37,7 +37,7 @@ const App = () => {
           <ComicDetail user={user} />
         </Route>
         <Route exact path="/edit-comic/:id">
-        {user ? <ComicEdit user={user} /> : <Redirect to="/signup" />}
+          {user ? <ComicEdit user={user} /> : <Redirect to="/signup" />}
         </Route>
         <Route exact path="/comics">
           <ComicBrowse user={user} />
@@ -52,7 +52,7 @@ const App = () => {
           <Logout setUser={setUser} />
         </Route>
         <Route exact path="/purchase/:id">
-          <Purchase />
+          <Purchase user={user} />
         </Route>
       </Switch>
     </div>
