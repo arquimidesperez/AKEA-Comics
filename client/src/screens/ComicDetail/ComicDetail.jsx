@@ -25,7 +25,7 @@ export default function ComicDetail(props) {
   return (
     <Layout user={props.user}>
       <div className="detail-container">
-        <div className="detail-card">
+        <div className={comic.brand === 'Marvel' ? "detail-card marvel" : "detail-card dc"}>
 
           <div className="detail-cover">
             <img className="detail-art" src={comic.imgURL} alt={comic.title} />
@@ -38,7 +38,7 @@ export default function ComicDetail(props) {
 
           <div className="detail-purchase-card">
             <Link to={`/purchase/${id}`}>
-              <button className="detail-purchase" >Purchase</button>
+              <button className="detail-purchase" >Buy Now</button>
             </Link>
           </div>
 
@@ -46,11 +46,16 @@ export default function ComicDetail(props) {
             <div className="detail-description">{comic.description}</div>
           </div>
         </div>
-      </div>
 
-      <div className="detail-buttons">
-        <Link to={`/edit-comic/${id}`}><button className="detail-edit">Edit</button></Link>
-        <Link to="/comics"><button className="detail-delete" onClick={() => deleteComic(comic._id)} >Delete</button></Link>
+        <div className="detail-buttons">
+          <div>
+            <Link to={`/edit-comic/${id}`}><button className="detail-edit">Edit</button></Link>
+          </div>
+          <div>
+            <Link to="/comics"><button className="detail-delete" onClick={() => deleteComic(comic._id)} >Delete</button></Link>    
+          </div>
+      </div>
+        
       </div>
     </Layout>
   );

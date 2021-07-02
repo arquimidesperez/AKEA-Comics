@@ -37,7 +37,9 @@ export default function Purchase(props) {
               />
             </div>
           <div className="purchase-information">
-            <div>Thank you for your <br/>purchase of: <br /> {comic.title}</div>
+            <div>Thank you for your <br />purchase of:
+              <div className='comic-title-purchase'>{comic.title}</div>
+            </div>
             <br/>
             <div>An email will be sent to your account on file for payment options.</div>
             </div>

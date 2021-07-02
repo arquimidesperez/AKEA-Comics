@@ -1,13 +1,11 @@
 .comic-image {
   width: 165px;
   height: 225px;
-
 }
 
 .comic-container {
-  font-family: "Comic Neue", cursive;
+  font-family: "Marvel", sans-serif;
   display: flex;
-  background-color: #cd352d;
   margin: 10px auto;
   width: 49vw;
   flex-wrap: wrap;
@@ -19,7 +17,7 @@
 }
 
 .comic-title {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bolder;
   text-decoration: none;
   color: white;
@@ -27,10 +25,10 @@
 }
 
 .comic-brand {
-  font-size: 15px;
+  font-size: .8rem;
   text-decoration: none;
   color: white;
-  margin-left: 125px;
+  text-align: right;
 }
 
 .dc {
@@ -39,4 +37,38 @@
 
 .marvel {
   background-color: #cd352d;
+}
+
+@media only screen and (min-width: 800px) {
+  .comic-cards-individuals{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .comic-info-container{
+    margin-left: 10px;
+    text-align: right;
+    width: 10vw;
+  }
+
+  .comic-title{
+    font-size: 1.2rem;
+    /* margin-bottom: 20px; */
+  }
+
+  .comic-brand{
+    font-size: 1rem;
+    margin-top: 150px;
+  }
+
+  .comic-container {
+    font-family: "Marvel", sans-serif;
+    display: flex;
+    margin: 10px auto;
+    width: 28vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
 }

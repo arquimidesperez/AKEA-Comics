@@ -47,3 +47,23 @@
   color: white;
   font-size: 16px;
 }
+
+/**
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
+**/
+
+@media only screen and (min-width: 800px) {
+  .landing-card {
+    border: 2px solid black;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(1px);
+  }  
+
+}

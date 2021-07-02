@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './SignUp.css'
 import { signUp } from '../../services/users'
 import { useHistory, Link } from 'react-router-dom'
+import { Layout } from "../../components";
 
 const SignUp = (props) => {
   //can be changed to a redirect 
@@ -62,10 +63,15 @@ const SignUp = (props) => {
   const { username, email, password, passwordConfirmation } = form
 
   return (
+    <Layout>
     <div className='signup-container'>
+
       <div className='signup-form'>
+
         <h3 className='signup-form-header'>SIGN UP</h3>
+
         <form onSubmit={onSignUp}>
+
           <div className='signup-username-div'>
             <input className='signup-username-input'
               required
@@ -76,6 +82,7 @@ const SignUp = (props) => {
               onChange={handleChange}
             />
           </div>
+
           <br />
           <input className='signup-email-input'
             required
@@ -106,13 +113,17 @@ const SignUp = (props) => {
           />
           </div>
           {renderError()}
+
         </form>
+
         <br />
+
         <button className='signup-login-button'>
-          Already have an account?<Link to='/login'> Login</Link>
+          <Link className='signup-to-login-link' to='/login'>Already have an account? Login</Link>
         </button>
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 
