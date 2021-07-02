@@ -58,20 +58,24 @@ const Login = (props) => {
   return (
     <Layout>
     <div className='login-container'>
-      <div className='login-form'>
-          <h3 className='login-form-header'>LOGIN</h3>
-        <form onSubmit={onLogin}>
+        
+        <div className='login-form'>
+
+        <p className='login-form-header'>LOGIN</p>
+          
+          <form onSubmit={onLogin}>
+            
           <div className='login-email-div'>
             <input className='login-email-input' 
               required
               type='text'
               name='email'
               value={email}
-              placeholder='Enter Email'
+              placeholder='Email'
               onChange={handleChange}
             />
           </div>
-          <br />
+
           <div className='login-password-div'>
             <input className='login-password-input'
               required
@@ -81,8 +85,10 @@ const Login = (props) => {
               placeholder='Password'
               onChange={handleChange}
             />
-          </div>
-          {renderError()}
+            </div>
+            
+            {renderError()}
+            
         </form>
       </div>
       </div>

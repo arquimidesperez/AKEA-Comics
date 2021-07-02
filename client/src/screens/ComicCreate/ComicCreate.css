@@ -1,14 +1,19 @@
 .comic-create {
-  background-color: #202020;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* https://i.pinimg.com/originals/2e/d8/20/2ed82058f206795b9127ee2d35aecad0.jpg */
+  /* http://3.bp.blogspot.com/-6d8vCS-2hwU/UBoIwA5ZuVI/AAAAAAAAMio/SoEloca91Bk/s1600/Action+One+Wallpaper.jpg */
+  background-image: url(https://i.pinimg.com/originals/2e/d8/20/2ed82058f206795b9127ee2d35aecad0.jpg);
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
 }
 
-.my-create-form {
+
+.create-form {
   margin: 0px auto;
   background-color: #cd352d;
   width: 70vw;
-  padding: 20px 10px 20px 10px;
+  padding: 25px 10px 25px 10px;
   box-shadow: 3px 3px 3px black;
 }
 
@@ -16,41 +21,55 @@
   color: white;
   font-family: "Bangers", cursive;
   text-shadow: 2px 2px black;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
 .create-input-image-link {
   margin: 10px auto;
   width: 200px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
 .create-input-title {
   margin: 10px auto;
   width: 200px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
 .create-input-price {
   margin: 10px auto;
   width: 200px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
 .create-input-brand {
   margin: 10px auto;
   width: 200px;
+  font-size: 1rem;
+  padding: 5px;
 }
 
 .create-textarea-description {
   margin: 10px auto;
   width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .create-submit-button {
+  width: 100px;
+  height: 33px;
+  font-family: 'Bangers', cursive;
+  border: none;
+  font-size: 1rem;
   background-color: black;
   color: white;
-  font-size: 1rem;
-  font-family: "Bangers", cursive;
-  width: 100px;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
 }
 
 /**
@@ -61,12 +80,19 @@
 
 @media only screen and (min-width: 800px) {
   .create-form {
-    background-color: #cd352d;
-    max-width: 50vw;
     margin: 0px auto;
-    padding: 10px;
+    background-color: #cd352d;
+    width: 30vw;
+    height: 70vh;
+    padding: 25px 10px 25px 10px;
+    box-shadow: 3px 3px 3px black;
+    /* background-color: #cd352d;
+    width: 40vw;
+    height: 80vh;
+    margin: 0px auto;
     box-shadow: 3px 3px 3px black;
     margin: 0 auto;
+    justify-content: space-evenly; */
   }
 
   /* edit these */
@@ -83,33 +109,44 @@
   .create-input-image-link {
     margin: 10px auto;
     width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
   }
 
   .create-input-title {
     margin: 10px auto;
     width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
   }
 
   .create-input-price {
     margin: 10px auto;
     width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
   }
 
   .create-input-brand {
     margin: 10px auto;
     width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
   }
 
   .create-textarea-description {
     margin: 10px auto;
     width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 
   .create-submit-button {
     background-color: black;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: "Bangers", cursive;
-    width: 200px;
+    width: 100px;
   }
 }
