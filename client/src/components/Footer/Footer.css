@@ -2,7 +2,7 @@
   background-color: black;
   padding: 20px;
   bottom: 0;
-  /* position: absolute; */
+  position: sticky;
   width: 100vw;
   display: flex;
   flex: 1;

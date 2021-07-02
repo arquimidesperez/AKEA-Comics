@@ -45,7 +45,7 @@ export default function ComicEdit(props) {
     <Layout user={props.user}>
       <div className="comic-edit">
 
-      <h3 className='editor-text'>Update</h3>
+      <h3 className='editor-text'>Edit</h3>
         
         <div className={comic.brand === 'Marvel' ? "editor-container marvel" : "editor-container dc"}>
             <div className="image-container">

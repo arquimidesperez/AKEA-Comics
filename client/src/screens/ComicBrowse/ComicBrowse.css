@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
 }
-h1 {
+
+.header-image-browse {
   background-image: url("https://i.imgur.com/ceaSQ4tl.jpg?1");
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,16 +12,49 @@ h1 {
   margin: 0;
   color: transparent;
 }
+
 a {
   text-decoration: none;
-  font-family: "Comic Neue", cursive;
+  font-family: "Marvel", sans-serif;
   font-weight: bolder;
 }
+
 .sort {
   position: relative;
   padding: 15px;
-  margin-left: 200px;
-  font-family: "Comic Neue", cursive;
+  margin-left: 50%;
+  font-family: "Marvel", sans-serif;
   font-weight: bolder;
   cursor: pointer;
+}
+
+/* .sort-container{
+  font-family: "Marvel", sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+  width: 50vw;
+  justify-self: right;
+  padding: 10px 10px;
+} */
+
+@media only screen and (min-width: 800px) {
+
+  .header-image-browse {
+    background-image: url("https://i.imgur.com/ceaSQ4tl.jpg?1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 230px;
+    margin: 0;
+    color: transparent;
+  }
+
+  .sort {
+    position: relative;
+    padding: 15px;
+    margin-left: 80%;
+    font-family: "Marvel", sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+  }
 }

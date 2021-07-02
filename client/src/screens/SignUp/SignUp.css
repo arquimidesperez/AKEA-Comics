@@ -2,10 +2,11 @@
   display:flex;
   flex-direction: column;
   background-image: url(https://i.imgur.com/CeAVEah.jpg);
+  background-size: cover;
   align-items: center;
   height: 100vh;
-  background-position-x: 50%;
-  background-size: 1300px;
+  background-position-x: 30%; 
+  /* background-size: 1300px; */
 }
 
 .signup-form {
@@ -20,27 +21,29 @@
   backdrop-filter: blur(3px);
 }
 
-.signup-form-header {
-
+.signup-form-header{
+  margin-top: -3px;
+  /* margin-bottom: -3px; */
 }
 
 .signup-username-div {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .signup-username-input {
   width: 200px;
-  height: 25px;
+  font-size: 1rem;
 }
 
 .signup-email-div {
-  margin-top: 26px;
-  padding-bottom: 20px;
+  /* margin-top: 10px; */
+  padding-bottom: 10px;
 }
 
 .signup-email-input {
   width: 200px;
-  height: 25px;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .signup-password-div {
@@ -49,12 +52,14 @@
 
 .signup-password-input {
   width: 200px;
-  height: 25px;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-.signup-confirm-password-input {
+.confirm-password-input {
   width: 200px;
-  height: 25px;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .signup-button {
@@ -65,11 +70,51 @@
   background-color: black;
   color: white;
   clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
-  border: none;
 }
 
 .signup-login-button {
-  width: 200px;
+  width: fit-content;
   font-family: 'Bangers', cursive;
-  
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: black;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  padding: 7px;
+  margin: 0px auto;
+}
+
+.signup-to-login-link{
+  text-decoration: none;
+  color: white;
+}
+
+/**
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
+**/
+
+@media only screen and (min-width: 800px) {
+
+  .signup-container {
+    display:flex;
+    flex-direction: column;
+    background-image: url(https://i.imgur.com/CeAVEah.jpg);
+    background-size: cover;
+    align-items: center;
+  }
+
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    width: 25vw;
+    height: 300px;
+    margin-top: 15vh;
+    padding-top: 20px;
+    background-color: rgba(255,255,255, 0.80);
+    backdrop-filter: blur(3px);
+  }
+
 }

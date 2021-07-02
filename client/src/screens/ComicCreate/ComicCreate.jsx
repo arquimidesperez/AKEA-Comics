@@ -39,8 +39,8 @@ export default function ComicCreate(props) {
       
       <Layout user={props.user} >
         <div className='comic-create'>
-          <form className='create-form' onSubmit={handleSubmit}>
-            <h2 className='create-form-title'>Add a New Comic Book</h2>
+          <form className='my-create-form' onSubmit={handleSubmit}>
+            <div className='create-form-title'>Add a New Comic Book</div>
             <input
               className='create-input-title'
               placeholder='Title'

@@ -1,14 +1,16 @@
 .detail-container {
   box-sizing: border-box;
   background-color: #202020;
-  padding: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
   color: white;
 }
 
 .detail-card {
-  background-color: red;
+  width: 70vw;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .detail-cover {
@@ -57,7 +59,8 @@ font-family: 'Bangers', cursive;
   clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
   font-family: 'Bangers', cursive;
   color: white;
-  font-size: 1.2rem;
+  padding: 5px;
+  font-size: 1rem;
 }
 
 .detail-description-card {
@@ -67,6 +70,7 @@ font-family: 'Bangers', cursive;
   display: flex;
   justify-content: center;
 }
+
 .detail-description {
   width: 80%;
   font-family: 'Marvel', sans-serif;
@@ -74,16 +78,105 @@ font-family: 'Bangers', cursive;
   font-weight: bold;
 }
 
-.detail-buttons {
-  background-color: #202020;
-  
+.detail-buttons{
+  display: flex;
+  width: 60vw;
+  margin: 10px auto;
+  justify-content: space-evenly;
 }
 
-.detail-edit, .detail-delete {
-  background-color: #202020;
+.detail-edit, 
+.detail-delete {
+  background-color: #CD352D;
   clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
   font-family: 'Bangers', cursive;
   color: white;
+  padding: 5px;
   font-size: 1.2rem;
+  width: 15vw;
+}
+
+.marvel{
+  background-color: #CD352D;
+}
+
+.dc{
+  background-color:#3477EA;
+}
+
+/**
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
+**/
+
+@media only screen and (min-width: 800px) {
+  .detail-card{
+      max-width: 60vw;
+  }
+
+  .detail-cover {
+    margin: 0 auto;
+    width: 300px;
+    height: 345px;
+    overflow: hidden;
+    border: 1px whitesmoke solid;
+    }
+  
+  .detail-art {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    object-fit:contain
+  }
+
+  .detail-buttons{
+    display: flex;
+    width: 50vw;
+    margin: 10px auto;
+    justify-content: space-evenly;
+  }
+  
+  .detail-edit, 
+  .detail-delete {
+    background-color: #CD352D;
+    clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+    font-family: 'Bangers', cursive;
+    color: white;
+    font-size: 1.4rem;
+    padding: 5px;
+    width: 8vw;
+  }
+
+  .detail-title {
+    font-size: 2.7rem;
+    margin: 10px
+  }
+  .detail-brand-price {
+    font-size: 1.8rem;
+    margin: 10px;
+    font-weight: bold;
+  }
+  
+  .detail-price {
+    font-size: 2.1rem
+  }
+  
+  .detail-description {
+    width: 80%;
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .detail-purchase {
+    background-color: #202020;
+    clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+    font-family: 'Bangers', cursive;
+    color: white;
+    padding: 5px;
+    font-size: 1.5rem;
+  }
 
 }
