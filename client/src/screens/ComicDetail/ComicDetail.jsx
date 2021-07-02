@@ -28,9 +28,7 @@ export default function ComicDetail(props) {
         <div
           className={comic.brand === "Marvel" ? "detail-card marvel" : "detail-card dc"}>
           
-          <div className="detail-cover">
             <img className="detail-art" src={comic.imgURL} alt={comic.title} />
-          </div>
 
 
             <div className="detail-information-card">

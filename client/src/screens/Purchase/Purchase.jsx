@@ -28,22 +28,23 @@ export default function Purchase(props) {
   return (
     <Layout user={props.user}>
       <div className="purchase-comic">
+
         <div className={comic.brand === 'Marvel' ? "purchase-container marvel" : "purchase-container dc"}>
-          <div className="comicbook-cover">
+            
             <img
               className="comicbook-art"
               src={comic.imgURL}
               alt={comic.title}
             />
-          </div>
+
           <div className="purchase-information">
             <div className="purchase-info-conditional">{props.user ? `Thank you for your purchase of: ` : `Please login to buy this comic:`}</div>
             <div className='comic-title-purchase'>{comic.title}</div>
-
-            <br />
-            <div>{props.user ? `An email will be sent to your account on file for payment options.` : null}</div>
+            <div className="purchase-email">{props.user ? `An email will be sent to your account on file for payment options.` : null}</div>
           </div>
+
         </div>
+
       </div>
     </Layout>
   );
