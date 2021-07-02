@@ -3,6 +3,7 @@ import './Login.css'
 // import Nav from '../Nav/Nav'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
+import { Layout } from "../../components";
 
 const Login = (props) => {
   const history = useHistory()
@@ -55,6 +56,7 @@ const Login = (props) => {
   const { email, password } = form
 
   return (
+    <Layout>
     <div className='login-container'>
       <div className='login-form'>
           <h3 className='login-form-header'>LOGIN</h3>
@@ -83,7 +85,8 @@ const Login = (props) => {
           {renderError()}
         </form>
       </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

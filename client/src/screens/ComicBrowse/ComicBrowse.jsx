@@ -31,15 +31,18 @@ const ComicBrowse = (props) => {
 
   return (
     <Layout user={props.user}>
-      <h1>.</h1>
-      <form className="sort" onChange={handleChange}>
-        <label>Sort By: </label>
-        <select>
-          <option value="All">All Comics</option>
-          <option value="Marvel">Marvel</option>
-          <option value="DC">DC</option>
-        </select>
-      </form>
+      <h1 className='header-image-browse'>.</h1>
+      <div className='sort-container'>
+        <form className="sort" onChange={handleChange}>
+          <label>Sort By: </label>
+          <select>
+            <option value="All">All Comics</option>
+            <option value="Marvel">Marvel</option>
+            <option value="DC">DC</option>
+          </select>
+        </form>
+      </div>
+
       <div className="comics-card">
         {comics.map((comic, index) => {
           return (

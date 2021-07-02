@@ -46,3 +46,34 @@ a:hover,
   color: white;
   font-size: 1.1rem;
 }
+
+/**
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
+**/
+
+@media only screen and (min-width: 800px) {
+  .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    font-family: "Bangers", cursive;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .link-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    text-decoration: none;
+    font-family: "Bangers", cursive;
+    color: white;
+    text-shadow: rgb(238, 233, 233);
+    width: 90vw;
+    margin: 0px auto;
+  }
+}
