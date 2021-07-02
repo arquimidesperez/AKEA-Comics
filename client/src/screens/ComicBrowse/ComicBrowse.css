@@ -4,15 +4,15 @@
   padding-bottom: 70px;
 }
 
-.header-image-browse {
-  background-image: url("https://i.imgur.com/ceaSQ4tl.jpg?1");
+/* .header-image-browse {
+  background-image: url("https://i.imgur.com/ceaSQ4t.jpg?2");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 230px;
+  height: 100px;
   margin: 0;
   color: transparent;
-}
+} */
 
 a {
   text-decoration: none;
@@ -40,15 +40,15 @@ a {
 
 @media only screen and (min-width: 800px) {
 
-  .header-image-browse {
+  /* .header-image-browse {
     background-image: url("https://i.imgur.com/ceaSQ4tl.jpg?1");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 230px;
+    height: 100px;
     margin: 0;
     color: transparent;
-  }
+  } */
 
   .sort {
     position: relative;

@@ -3,6 +3,7 @@ import { Layout, ComicCards } from "../../components";
 import { useState, useEffect } from "react";
 import { getAllComics } from "../../services/comics";
 import "./ComicBrowse.css";
+import Carousel from "../../components/Carousel/Carousel";
 
 const ComicBrowse = (props) => {
   const [apiData, setApiData] = useState([]);
@@ -31,10 +32,13 @@ const ComicBrowse = (props) => {
 
   return (
     <Layout user={props.user}>
-      <h1 className='header-image-browse'>.</h1>
+      <div>
+      {/* <h1 className='header-image-browse'></h1> */}
+        <Carousel />
+      </div> 
       <div className='sort-container'>
         <form className="sort" onChange={handleChange}>
-          <label>Sort By: </label>
+          <label>Filter: </label>
           <select>
             <option value="All">All Comics</option>
             <option value="Marvel">Marvel</option>
