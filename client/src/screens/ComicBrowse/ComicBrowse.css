@@ -29,6 +29,19 @@ a {
   cursor: pointer;
 }
 
+/* Arqui's sort container thingy */
+/* .sort-container{
+  width: 100vw;
+  height: fit-content;
+  font-family: "Bangers", cursive;
+  border: none;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  clip-path: polygon(0% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+} */
+
+
 /* .sort-container{
   font-family: "Marvel", sans-serif;
   font-weight: bolder;
@@ -52,10 +65,23 @@ a {
 
   .sort {
     position: relative;
-    padding: 15px;
-    margin-left: 80%;
+    padding: 20px;
+    margin-left: 75%;
     font-family: "Marvel", sans-serif;
     font-weight: bolder;
     cursor: pointer;
+    font-size: 1.2rem;
   }
+  
+  /* .sort-container{
+    width: 100vw;
+    height: fit-content;
+    font-family: "Bangers", cursive;
+    border: none;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    clip-path: polygon(0% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  } */
+
 }
