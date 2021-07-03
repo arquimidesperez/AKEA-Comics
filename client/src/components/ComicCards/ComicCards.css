@@ -7,13 +7,13 @@
   font-family: "Marvel", sans-serif;
   display: flex;
   margin: 10px auto;
-  width: 49vw;
+  width: 165px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .comic-cards-individuals {
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .comic-title {
@@ -24,10 +24,9 @@
 }
 
 .comic-brand {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-decoration: none;
   color: white;
-  text-align: right;
 }
 
 .dc {
@@ -39,35 +38,46 @@
   background-size: cover;
 }
 
+/* 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+*/
+
 @media only screen and (min-width: 800px) {
+
   .comic-cards-individuals {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .comic-info-container {
-    margin-left: 10px;
-    text-align: right;
-    width: 10vw;
-  }
-
-  .comic-title {
-    font-size: 1.2rem;
-    /* margin-bottom: 20px; */
-  }
-
-  .comic-brand {
-    font-size: 1rem;
-    margin-top: 150px;
+    width: 28vw;
+    padding: 0px;
   }
 
   .comic-container {
-    font-family: "Marvel", sans-serif;
-    display: flex;
-    margin: 10px auto;
     width: 28vw;
-    flex-wrap: wrap;
-    justify-content: center;
   }
+
+  .comic-info-container {
+    margin: 0px auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+    width: 12vw;
+  }
+
+  .comic-title {
+    font-size: 1.5rem;
+  }
+
+  .comic-brand {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    
+  }
+
+
 }
