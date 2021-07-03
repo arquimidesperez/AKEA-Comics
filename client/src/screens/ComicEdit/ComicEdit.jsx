@@ -44,20 +44,17 @@ export default function ComicEdit(props) {
   return (
     <Layout user={props.user}>
       <div className="comic-edit">
-
-      <h3 className='editor-text'>Edit</h3>
         
         <div className={comic.brand === 'Marvel' ? "editor-container marvel" : "editor-container dc"}>
-            <div className="image-container">
               <img
                 className="edit-product-image"
                 src={comic.imgURL}
                 alt={comic.name}
               />
-            </div>
           
             <div className='edit-information'>
             <form onSubmit={handleSubmit}>
+            <div className='editor-text'> Title </div>
             <input
                 className="input-name"
                 placeholder="title"
@@ -69,6 +66,7 @@ export default function ComicEdit(props) {
               />
             </form>
             <form className="edit-form" onSubmit={handleSubmit}>
+            <div className='editor-text'> Image Source </div>
             <input
                   className="input-image-link"
                   placeholder="Image Link"
@@ -77,7 +75,8 @@ export default function ComicEdit(props) {
                   required
                   onChange={handleChange}
                 />
-              <br />
+
+              <div className='editor-text'> Price </div>
               <input
                 className="input-price"
                 placeholder="Price"
@@ -86,7 +85,8 @@ export default function ComicEdit(props) {
                 required
                 onChange={handleChange}
               />
-              <br />
+
+              <div className='editor-text'> Brand </div>
               <input
                 className="input-brand"
                 placeholder="DC or Marvel"
@@ -95,9 +95,7 @@ export default function ComicEdit(props) {
                 required
                 onChange={handleChange}
               />
-              <div className='editor-text'>
-              Description:
-              </div>
+              <div className='editor-text'> Summary </div>
               <textarea
                 className="textarea-description"
                 rows={10}
@@ -110,7 +108,7 @@ export default function ComicEdit(props) {
               />
               <br />
               <button type="submit" className="save-button">
-                Save Changes
+                Save Edits
               </button>
           </form>
             </div>

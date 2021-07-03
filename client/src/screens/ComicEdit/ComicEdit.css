@@ -1,72 +1,66 @@
-.comic-edit{
+.comic-edit {
   background-color: #202020;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.editor-container{
+.editor-container {
   max-width: 70vw;
-  padding: 10px;
   margin: 0px auto;
   box-shadow: 2px 2px 2px black;
 }
 
-.marvel{
-  background-color: #CD352D;
+.edit-product-image {
+  max-width: 70vw;
 }
 
-.dc{
-  background-color: #3477EA;
-}
-
-.edit-product-image{
-  max-width: 60vw;
-}
-
-.input-name{
-  margin: 10px auto;
+.input-name {
   font-size: 1rem;
   width: 200px;
 }
 
-.input-image-link{
-  margin: 10px auto;
+.input-image-link {
   font-size: 1rem;
   width: 200px;
 }
 
-.input-price{
-  margin: 10px auto;
+.input-price {
   font-size: 1rem;
   width: 200px;
 }
 
-.input-brand{
-  margin: 10px auto;
+.input-brand {
   font-size: 1rem;
   width: 200px;
 }
 
-.editor-text{
-  margin: 10px auto;
-  font-family: 'Bangers', cursive;
+.editor-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Bangers", cursive;
   color: white;
   text-shadow: 2px 2px black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
-.textarea-description{
+.textarea-description {
   width: 200px;
   font-size: 1rem;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-.save-button{
+.save-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 33px;
+  font-family: "Bangers", cursive;
+  border: none;
+  font-size: 1rem;
   background-color: black;
   color: white;
-  font-family: 'Bangers', cursive;
-  width: 100px;
-  font-size: 1rem;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
 }
 
 /**
@@ -76,63 +70,65 @@
 **/
 
 @media only screen and (min-width: 800px) {
-  .editor-container{
+  .editor-container {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     max-width: 60vw;
-    padding: 20px 10px 20px 10px;
   }
 
-  .edit-product-image{
-    max-width: 20vw;
+  .edit-product-image {
+    width: 25vw;
   }
 
-  .input-name{
-    margin: 10px auto;
-    width: 300px;
-    font-size: 1rem;
-  }
-  
-  .input-image-link{
-    margin: 10px auto;
-    width: 300px;
-    font-size: 1rem;
-  }
-  
-  .input-price{
-    margin: 10px auto;
-    width: 300px;
-    font-size: 1rem;
+  .edit-information{
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30vw;
+    height: fit-content;
   }
 
-  .input-brand{
-    margin: 10px auto;
-    width: 300px;
-    font-size: 1rem;
-  }
-  
-  .editor-text{
-    margin: 10px auto;
-    font-family: 'Bangers', cursive;
-    font-size: 26px;
+  .editor-text {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: "Bangers", cursive;
     color: white;
     text-shadow: 2px 2px black;
+    font-size: 1.4rem;
     font-weight: 500;
-    font-size: 1.5rem;
   }
-  
-  .textarea-description{
+
+  .input-name {
+    font-size: 1rem;
     width: 300px;
+    padding: 5px;
   }
   
-  .save-button{
-    background-color: black;
-    color: white;
-    font-family: 'Bangers', cursive;
-    width: 10vw;
-    margin-top: 5px;
+  .input-image-link {
+    font-size: 1rem;
+    width: 300px;
     padding: 5px;
-    font-size: 1.2rem;
   }
+  
+  .input-price {
+    font-size: 1rem;    
+    width: 300px;
+    padding: 5px;
+  }
+  
+  .input-brand {
+    font-size: 1rem;
+    width: 300px;
+    padding: 5px;
+  }
+
+  .textarea-description {
+    font-size: 1rem;
+    width: 300px;
+    height: 150px;
+    padding: 5px;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
 
 }
