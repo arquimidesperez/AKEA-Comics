@@ -23,6 +23,8 @@ a:hover,
   display: flex;
   flex-direction: column;
   background-color: black;
+  width: 100vw;
+  position: fixed;
 }
 
 .link-holder {
