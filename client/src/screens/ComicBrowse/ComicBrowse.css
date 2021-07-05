@@ -21,7 +21,7 @@ a {
 }
 
 /* Arqui's sort container thingy */
-/* .sort-container{
+.sort-container{
   width: 100vw;
   height: fit-content;
   font-family: "Bangers", cursive;
@@ -30,7 +30,7 @@ a {
   background-color: black;
   color: white;
   clip-path: polygon(0% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
-} */
+}
 
 
 /* .sort-container{
@@ -64,7 +64,7 @@ a {
     font-size: 1.2rem;
   }
   
-  /* .sort-container{
+  .sort-container{
     width: 100vw;
     height: fit-content;
     font-family: "Bangers", cursive;
@@ -73,6 +73,7 @@ a {
     background-color: black;
     color: white;
     clip-path: polygon(0% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
-  } */
+    /* border: 2px solid black; */
+  }
 
 }

@@ -34,18 +34,33 @@ a:hover,
 
 .drop-down-menu{
   color: white;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 15px;
   width: 60vw;
   font-family: "Bangers", cursive;
   color: white;
-  font-size: 19px;
   text-shadow: rgb(238, 233, 233);
 }
 
-.fa-bars:hover{
-  color: red;
+.drop-down-menu-links{
+  color: white;
+  margin: 10px auto;
+  width: 60vw;
+  font-family: "Bangers", cursive;
+  color: white;
+  font-size: 1rem;
+  text-shadow: rgb(238, 233, 233);
+  display: none;
+} 
+
+.fa-bars:active,
+.drop-down-menu-links {
+  display: block;
 }
+
+
 
 .link-holder {
   display: flex;
@@ -101,9 +116,9 @@ a:hover,
     text-decoration: none;
     font-family: "Bangers", cursive;
     color: white;
-    text-shadow: rgb(238, 233, 233);
-    width: 90vw;
+    width: 80vw;
     margin: 0px auto;
+    font-size: 1.2rem;
     
   }
 }

@@ -20,7 +20,7 @@ export default function UpdatePassword(props) {
   };
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className='update-password-container'>
         <div className='update-password-form'>
 
