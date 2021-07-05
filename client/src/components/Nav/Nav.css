@@ -19,14 +19,6 @@ a:hover,
 .logo:hover {
   color: yellow;
 }
-/* .nav-div {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  width: 100vw;
-  position: fixed;
-  margin-bottom: 1000px;
-} */
 
 .nav-div{
   background-color: black;
@@ -40,6 +32,36 @@ a:hover,
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.6);
 }
 
+.drop-down-menu{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 15px;
+  width: 60vw;
+  font-family: "Bangers", cursive;
+  color: white;
+  text-shadow: rgb(238, 233, 233);
+}
+
+.drop-down-menu-links{
+  color: white;
+  margin: 10px auto;
+  width: 60vw;
+  font-family: "Bangers", cursive;
+  color: white;
+  font-size: 1rem;
+  text-shadow: rgb(238, 233, 233);
+  display: none;
+} 
+
+.fa-bars:active,
+.drop-down-menu-links {
+  display: block;
+}
+
+
+
 .link-holder {
   display: flex;
   flex-direction: row;
@@ -51,6 +73,7 @@ a:hover,
   color: white;
   font-size: 19px;
   text-shadow: rgb(238, 233, 233);
+  display: none;
 }
 
 .nav-link {
@@ -80,6 +103,11 @@ a:hover,
     font-size: 1.5rem;
   }
 
+  .drop-down-menu{
+    display: none;
+  }
+  
+
   .link-holder {
     display: flex;
     flex-direction: row;
@@ -88,8 +116,9 @@ a:hover,
     text-decoration: none;
     font-family: "Bangers", cursive;
     color: white;
-    text-shadow: rgb(238, 233, 233);
-    width: 90vw;
+    width: 80vw;
     margin: 0px auto;
+    font-size: 1.2rem;
+    
   }
 }

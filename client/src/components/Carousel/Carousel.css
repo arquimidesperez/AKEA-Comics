@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   background-color: black;
+  margin-top: 70px;
 }
 .carousel-message {
   display: flex;
@@ -43,4 +44,23 @@
   opacity: 5;
   transition-duration: 5sec;
   transform: scale(0.5);
+}
+
+
+@media only screen and (min-width: 800px) {
+
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 70px;
+  }
+
+  .carousel-image {
+    width: 60vh; 
+  }
+
 }

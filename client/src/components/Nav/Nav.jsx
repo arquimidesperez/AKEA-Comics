@@ -4,12 +4,21 @@ import { NavLink } from "react-router-dom";
 import { Logout } from "../../screens/Logout/Logout";
 
 const Nav = ({ user }) => {
+
   return (
     <nav>
       <div className="nav-div">
         <div className="logo-holder">
           <NavLink  to="/"><h2 className="logo">AKEA COMICS</h2></NavLink>
         </div>
+        <div className='drop-down-menu'>
+          <i class="fas fa-bars" />
+          <NavLink className='drop-down-menu-links' to='/'>Home</NavLink>
+          <NavLink className='drop-down-menu-links' to='/comics'>Browse</NavLink>
+          <NavLink className='drop-down-menu-links' to='/login'>Login</NavLink>
+          <NavLink className='drop-down-menu-links' to='/signup'>Sign Up</NavLink>
+        </div>
+        
         <div className="link-holder">
           <NavLink className="nav-link" to="/comics">
             Browse
