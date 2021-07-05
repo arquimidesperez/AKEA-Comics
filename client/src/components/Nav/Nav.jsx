@@ -3,10 +3,6 @@ import { NavLink } from "react-router-dom";
 // eslint-disable-next-line
 import { Logout } from "../../screens/Logout/Logout";
 
-/**
- * Want the Welcome, User to be the same size; slight issue where it appears smallers
- */
-
 const Nav = ({ user }) => {
   return (
     <nav>
@@ -18,7 +14,6 @@ const Nav = ({ user }) => {
           <NavLink className="nav-link" to="/comics">
             Browse
           </NavLink>
-
           {user ? (
             <NavLink className="nav-link" to="/create-comic">
               Create
@@ -28,8 +23,6 @@ const Nav = ({ user }) => {
               Create
             </NavLink>
           )}
-
-
           {user ? (
             <NavLink className="nav-link" to="/logout">
               Logout
@@ -46,6 +39,14 @@ const Nav = ({ user }) => {
               Sign Up
             </NavLink>
           )}
+          {user ? (
+            <NavLink user={user} className="nav-link" to="/change-password">
+            Change Password
+          </NavLink>            
+          ) : (
+            null
+          )}
+
         </div>
       </div>
     </nav>
