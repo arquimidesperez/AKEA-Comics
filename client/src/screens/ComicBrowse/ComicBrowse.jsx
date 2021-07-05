@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getAllComics } from "../../services/comics";
 import "./ComicBrowse.css";
 import Carousel from "../../components/Carousel/Carousel";
+import { CarouselData } from "../../components/Carousel/CarouselData";
 
 const ComicBrowse = (props) => {
   const [apiData, setApiData] = useState([]);
@@ -31,10 +32,10 @@ const ComicBrowse = (props) => {
   };
 
   return (
+    <>
     <Layout user={props.user}>
-      <div>
-      {/* <h1 className='header-image-browse'></h1> */}
-        <Carousel />
+      <div className="carousel-container">
+        <Carousel  covers={CarouselData}/>
       </div> 
       <div className='sort-container'>
         <form className="sort" onChange={handleChange}>
@@ -62,8 +63,10 @@ const ComicBrowse = (props) => {
           );
         })}
       </div>
-    </Layout>
-  );
+      </Layout>
+     </>
+      );
+
 };
 
 export default ComicBrowse;

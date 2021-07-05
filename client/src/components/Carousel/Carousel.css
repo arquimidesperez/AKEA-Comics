@@ -1,4 +1,46 @@
 .carousel {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.carousel-message {
+  display: flex;
   
+  color: white;
+  font-family: "Marvel", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.carousel-image {
+  width: 40vh; 
+}
+.right-arrow {
+  position: absolute;
+  right: 15px;
+  font-size: 2rem;
+  color: white;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.left-arrow {
+  position: absolute;
+  left: 15px;
+  font-size: 2rem;
+  color: white;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.cover {
+  opacity: 0;
+  transition-duration: 1sec ease;
+}
+.cover-active {
+  opacity: 5;
+  transition-duration: 5sec;
+  transform: scale(0.5);
 }
