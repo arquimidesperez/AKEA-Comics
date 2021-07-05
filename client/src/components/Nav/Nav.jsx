@@ -10,6 +10,9 @@ const Nav = ({ user }) => {
         <div className="logo-holder">
           <NavLink  to="/"><h2 className="logo">AKEA COMICS</h2></NavLink>
         </div>
+        <div className='drop-down-menu'>
+        <i class="fas fa-bars"/>
+        </div>
         <div className="link-holder">
           <NavLink className="nav-link" to="/comics">
             Browse

@@ -6,6 +6,7 @@
   align-items: center;
   height: 100vh;
   background-position-x: 30%; 
+  margin-top: 100px;
 }
 
 .signup-form {
