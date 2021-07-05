@@ -2,6 +2,7 @@ import './Layout.css'
 import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 
+
 //add props to layout 
 const Layout = (props) => (
   <div className='layout'>
