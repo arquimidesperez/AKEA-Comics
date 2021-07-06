@@ -49,3 +49,58 @@ export const changePassword = async (data) => {
     throw error;
   }
 };
+
+export const getUserWishlist = async (userId, comicId) => {
+  try {
+    const response = await api.get(`/users/${userId}/wishlist`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const addComicToWishlist = async (userId, comicId) => {
+  try {
+    const response = await api.put(`/users/${userId}/wishlist/${comicId}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const removeComicFromWishlist = async (userId, comicId) => {
+  try {
+    const response = await api.delete(`/users/${userId}/wishlist/${comicId}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+// export const getUserComic = async (userId, comicId) => {
+//   try {
+//     const response = await api.get(`/users/${userId}/comics/${comicId}`)
+//     return response.data
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
+// export const createUserComic = async (userId, comicId) => {
+//   try {
+//     const response = await api.post(`/users/${userId}/comics`)
+//     return response.data
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
+// export const deleteUserComic = async (userId, comicId) => {
+//   try {
+//     const response = await api.delete(`/users/${userId}/comics/${comicId}`)
+//     return response.data
+//   } catch (error) {
+//     throw error
+//   }
+// }
+

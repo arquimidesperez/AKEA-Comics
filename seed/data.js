@@ -10,8 +10,17 @@ const insertData = async () => {
     username: "admin",
     email: "admin@super.gmail.com",
     password_digest: await bcrypt.hash("!a$ecureP@ssw0Rd55!", 11),
+    wishlist: [],
   });
   await user1.save();
+
+  const user2 = new User({
+    username: 'wish',
+    email: 'wish@super.gmail.com',
+    password_digest: await bcrypt.hash('wishlist', 11),
+    wishlist: [],
+  })
+  await user2.save()
 
   const comics = [
     {
@@ -173,6 +182,10 @@ const insertData = async () => {
   ];
   await Comic.insertMany(comics);
   console.log("Created comics!");
+
+  user1.wishlist = await Comic.find()
+  await user1.save()
+
 
   db.close();
 };
