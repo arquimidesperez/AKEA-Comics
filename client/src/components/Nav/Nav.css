@@ -42,7 +42,10 @@ a:hover,
   color: white;
   text-shadow: rgb(238, 233, 233);
 }
-
+.drop-down-menu:hover {
+  cursor: pointer;
+  color: yellow;
+}
 .drop-down-menu-links {
   color: white;
   margin: 10px auto;
@@ -52,6 +55,9 @@ a:hover,
   font-size: 1rem;
   text-shadow: rgb(238, 233, 233);
   display: block;
+}
+.drop-down-menu-links:hover {
+  color: yellow;
 }
 
 .drop-down-menu-open {
