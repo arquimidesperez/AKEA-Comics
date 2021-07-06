@@ -22,9 +22,8 @@ a:hover,
 
 .nav-div{
   background-color: black;
-  /* text-align: left; */
   height: fit-content;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -54,12 +53,6 @@ a:hover,
   text-shadow: rgb(238, 233, 233);
   display: none;
 } 
-
-.fa-bars:active,
-.drop-down-menu-links {
-  display: block;
-}
-
 
 
 .link-holder {
@@ -101,18 +94,18 @@ a:hover,
     font-family: "Bangers", cursive;
     color: white;
     font-size: 1.5rem;
+    width: 100%;
   }
 
   .drop-down-menu{
     display: none;
   }
-  
 
   .link-holder {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
     font-family: "Bangers", cursive;
     color: white;

@@ -12,11 +12,11 @@ const Nav = ({ user }) => {
           <NavLink  to="/"><h2 className="logo">AKEA COMICS</h2></NavLink>
         </div>
         <div className='drop-down-menu'>
-          <i class="fas fa-bars" />
-          <NavLink className='drop-down-menu-links' to='/'>Home</NavLink>
-          <NavLink className='drop-down-menu-links' to='/comics'>Browse</NavLink>
-          <NavLink className='drop-down-menu-links' to='/login'>Login</NavLink>
-          <NavLink className='drop-down-menu-links' to='/signup'>Sign Up</NavLink>
+          <i className="fas fa-bars" />
+          <a href='/' className='drop-down-menu-links' >Home</a>
+          <a href='/comics' className='drop-down-menu-links' >Browse</a>
+          <a href='/login' className='drop-down-menu-links' >Login</a>
+          <a href='/signup' className='drop-down-menu-links'>Sign Up</a>
         </div>
         
         <div className="link-holder">
