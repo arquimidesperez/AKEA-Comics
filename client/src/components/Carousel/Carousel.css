@@ -1,23 +1,42 @@
 .carousel {
   display: flex;
   flex-direction: column;
-  height: 50vh;
-  justify-content: center;
+  height: 30vh;
+  justify-content: space-evenly;
   align-items: center;
   background-color: black;
   margin-top: 70px;
 }
+
 .carousel-message {
   display: flex;
-  
-  color: white;
-  font-family: "Marvel", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .carousel-image {
-  width: 40vh; 
+  width: 125vw;
+  margin-top: 70px;
 }
+
+.carousel-message {
+  color: white;
+  font-family: "Bangers", cursive;
+  font-size: 30px;
+  margin: 0;
+}
+
+.carousel-month {
+  color: yellow;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.carousel-name {
+  color: white;
+  margin-top: 0;
+}
+
 .right-arrow {
   position: absolute;
   right: 15px;
@@ -27,6 +46,7 @@
   cursor: pointer;
   user-select: none;
 }
+
 .left-arrow {
   position: absolute;
   left: 15px;
@@ -36,19 +56,19 @@
   cursor: pointer;
   user-select: none;
 }
+
 .cover {
   opacity: 0;
   transition-duration: 1sec ease;
 }
+
 .cover-active {
   opacity: 5;
   transition-duration: 5sec;
   transform: scale(0.5);
 }
 
-
 @media only screen and (min-width: 800px) {
-
   .carousel {
     display: flex;
     flex-direction: column;
@@ -56,11 +76,30 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    margin-top: 70px;
+    margin-top: 100px;
   }
 
   .carousel-image {
-    width: 60vh; 
+    width: 150vw;
+    height: 700px;
+    object-fit: cover;
+    object-position: top;
   }
 
+  .carousel-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 4rem;
+  }
+
+  .carousel-month {
+    color: yellow;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  .carousel-name {
+    color: white;
+  }
 }

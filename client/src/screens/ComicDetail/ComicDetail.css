@@ -5,7 +5,7 @@
   padding-bottom: 60px;
   text-align: center;
   color: white;
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .background-art{
@@ -108,38 +108,44 @@ font-family: 'Bangers', cursive;
 
 
 /**
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY      
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
+  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
 **/
 
 @media only screen and (min-width: 800px) {
 
-  .background-art{
-    height: 300px;
-    width: 100vw;
+  /* .background-art-div{
     z-index: 0;
+  } */
+
+  /* z-index defaults to position static 
+    makes it harder to establish stacking context
+    need to use position absolute/relative to make it work
+  */
+
+  .background-art{
+    height: 350px;
+    width: 100vw;
     object-fit: cover;
+    z-index: 0;
+    position: relative;
+    border-bottom: 40px solid white;
+    object-position: 0% 10%;
   }
 
   .detail-card{
     width: 60vw;
     display: flex;
-    z-index: 20;    
-    margin-top: -10vh;
+    z-index: 0;    
+    position: relative;
+    margin-top: -15vh;
   }
 
   .detail-art {
     width: 25vw;
-    z-index: 90;
+    z-index: 0;
+    position: relative;
   }
 
   .detail-information-card{
