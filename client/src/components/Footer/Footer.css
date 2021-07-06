@@ -7,6 +7,7 @@
   display: flex;
   flex: 1;
   margin-top: auto;
+  z-index: 100;
 }
 
 .copyright-info{

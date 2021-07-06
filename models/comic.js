@@ -8,7 +8,8 @@ const Comic = new Schema(
     imgURL: { type: String, required: false },
     price: { type: Number, required: true },
     brand: { type: String, required: true },
-    description: { type: String, required: true }
+    description: { type: String, required: true },
+    backgroundImage: { type: String, required: true }
   },
   { timestamps: true }
 )

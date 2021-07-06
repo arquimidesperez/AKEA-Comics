@@ -8,13 +8,20 @@
   margin-top: 100px;
 }
 
+.background-art{
+  width: 375px;
+}
+
 .detail-card {
   width: 70vw;
   margin: 0 auto;
+  margin-top: -5vh;
+  z-index: 10;
 }
 
 .detail-art {
   width: 70vw;
+  z-index: 10;
 }
 
 .detail-information-card {
@@ -116,13 +123,23 @@ font-family: 'Bangers', cursive;
 
 @media only screen and (min-width: 800px) {
 
+  .background-art{
+    height: 300px;
+    width: 100vw;
+    z-index: 0;
+    object-fit: cover;
+  }
+
   .detail-card{
     width: 60vw;
     display: flex;
+    z-index: 20;    
+    margin-top: -10vh;
   }
 
   .detail-art {
     width: 25vw;
+    z-index: 90;
   }
 
   .detail-information-card{
