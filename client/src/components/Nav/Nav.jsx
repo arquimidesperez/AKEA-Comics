@@ -2,8 +2,19 @@ import "./Nav.css";
 import { NavLink } from "react-router-dom";
 // eslint-disable-next-line
 import { Logout } from "../../screens/Logout/Logout";
+import { useState } from "react";
 
 const Nav = ({ user }) => {
+
+  const [menu, setMenu] = useState('closed');
+
+  const handleChange = () => {
+    if (menu === 'closed') {
+      setMenu('open');
+    } else {
+      setMenu('closed');
+    }
+  }
 
   return (
     <nav>
@@ -11,12 +22,15 @@ const Nav = ({ user }) => {
         <div className="logo-holder">
           <NavLink  to="/"><h2 className="logo">AKEA COMICS</h2></NavLink>
         </div>
+        
         <div className='drop-down-menu'>
-          <i className="fas fa-bars" />
-          <a href='/' className='drop-down-menu-links' >Home</a>
-          <a href='/comics' className='drop-down-menu-links' >Browse</a>
-          <a href='/login' className='drop-down-menu-links' >Login</a>
-          <a href='/signup' className='drop-down-menu-links'>Sign Up</a>
+          <i className="fas fa-bars" onClick={handleChange}/>
+          <div className={`drop-down-menu-${menu}`}>
+          <a href='/' className={`drop-down-menu-links`} >Home</a>
+          <a href='/comics' className={`drop-down-menu-links`} >Browse</a>
+          <a href='/login' className={`drop-down-menu-links`} >Login</a>
+          <a href='/signup' className={`drop-down-menu-links`}>Sign Up</a>
+          </div>
         </div>
         
         <div className="link-holder">
