@@ -1,22 +1,29 @@
 .carousel {
   display: flex;
   flex-direction: column;
-  height: 50vh;
-  justify-content: center;
+  height: 40vh;
+  justify-content: space-evenly;
   align-items: center;
   background-color: black;
   margin-top: 70px;
 }
 .carousel-message {
   display: flex;
-  
   color: white;
   font-family: "Marvel", sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
 .carousel-image {
-  width: 40vh; 
+  width: 125vw; 
+  /* margin-top: 70px; */
+  object-fit: cover;
+}
+.carousel-name {
+ color: white;
+ font-family: "Bangers", cursive;
+ font-size: 30px;
+ margin: 0;
 }
 .right-arrow {
   position: absolute;
@@ -56,11 +63,11 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    margin-top: 70px;
+    margin-top: 200px;
   }
 
   .carousel-image {
-    width: 60vh; 
+    width: 100vw; 
   }
 
 }
