@@ -22,7 +22,6 @@ export default function Carousel({ covers }) {
 
   return (
     <div className="carousel">
-      
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevCover} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextCover} />
       {CarouselData.map((covers, index) => {
@@ -30,25 +29,21 @@ export default function Carousel({ covers }) {
           <div className={index === current ? "cover-active" : "cover"}>
             {index === current && (
               <div>
-              <img
-                className="carousel-image"
-                key={index}
-                src={covers.image}
-                alt="not available"
+                <img
+                  className="carousel-image"
+                  key={index}
+                  src={covers.image}
+                  alt="not available"
                 />
-                <p className="carousel-name">
-                  <span className='carousel-month'>Heros of the Month!</span>
-                  <br />
-                  {covers.name}
-                </p>
+                <div className="carousel-message">
+                  <p className="carousel-month">Heros of the Month!</p>
+                  <p className="carousel-name">{covers.name}</p>
+                </div>
               </div>
             )}
-            
-            
           </div>
         );
       })}
     </div>
   );
-
 }
