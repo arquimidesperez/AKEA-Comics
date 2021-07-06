@@ -17,7 +17,6 @@
 .carousel-image {
   width: 125vw; 
   /* margin-top: 70px; */
-  object-fit: cover;
 }
 .carousel-name {
  color: white;
@@ -63,11 +62,22 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    margin-top: 200px;
+    margin-top: 100px;
   }
 
   .carousel-image {
-    width: 100vw; 
+    width: 150vw; 
+    height: 700px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .carousel-name{
+    font-size: 3.6rem;
+  }
+
+  .carousel-month{
+    color: yellow;
   }
 
 }

@@ -29,19 +29,26 @@ export default function Carousel({ covers }) {
         return (
           <div className={index === current ? "cover-active" : "cover"}>
             {index === current && (
+              <div>
               <img
                 className="carousel-image"
                 key={index}
                 src={covers.image}
                 alt="not available"
-              />
+                />
+                <p className="carousel-name">
+                  <span className='carousel-month'>Heros of the Month!</span>
+                  <br />
+                  {covers.name}
+                </p>
+              </div>
             )}
-        
-            <h2 className="carousel-name">Heros of the Month!<br/>{covers.name}</h2>
+            
             
           </div>
         );
       })}
     </div>
   );
+
 }
