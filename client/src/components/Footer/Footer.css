@@ -1,4 +1,4 @@
-.footer-div{
+.footer-div {
   background-color: black;
   padding: 20px;
   bottom: 0;
@@ -8,11 +8,50 @@
   flex: 1;
   margin-top: auto;
   z-index: 100;
+  height: fit-content;
 }
 
-.copyright-info{
+.copyright-info {
   color: white;
-  font-family: 'Bangers', cursive;
-  font-size: 24px;
+  font-family: "Bangers", cursive;
+  font-size: 1.2rem;
   text-align: left;
+}
+
+.footer-link-holder {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 55vw;
+  font-family: "Bangers", cursive;
+  color: white;
+}
+
+.footer-a {
+  color: white;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .footer-link-holder {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 60vw;
+    font-family: "Bangers", cursive;
+    color: white;
+    visibility: visible;
+  }
+
+  .footer-a {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .copyright-info {
+    color: white;
+    font-family: "Bangers", cursive;
+    font-size: 2rem;
+    text-align: left;
+  }
 }
