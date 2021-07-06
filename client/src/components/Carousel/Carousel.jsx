@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CarouselData } from "./CarouselData";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import "./Carousel.css";
 
 export default function Carousel({ covers }) {
@@ -22,8 +22,8 @@ export default function Carousel({ covers }) {
 
   return (
     <div className="carousel">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevCover} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextCover} />
+      <BiLeftArrow className="left-arrow" onClick={prevCover} />
+      <BiRightArrow className="right-arrow" onClick={nextCover} />
       {CarouselData.map((covers, index) => {
         return (
           <div className={index === current ? "cover-active" : "cover"}>
