@@ -14,6 +14,7 @@ export default function ComicDetail(props) {
       const comic = await getComic(id);
       setComic(comic);
       setLoaded(true);
+      console.log(comic);
     };
     fetchComic();
   }, [id]);
@@ -25,6 +26,9 @@ export default function ComicDetail(props) {
   return (
     <Layout user={props.user}>
       <div className="detail-container">
+
+          <img className="background-art" src="https://wallpaperaccess.com/full/2060073.jpg" alt={comic.title} />
+
         <div
           className={comic.brand === "Marvel" ? "detail-card marvel" : "detail-card dc"}>
           
