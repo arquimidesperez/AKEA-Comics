@@ -44,7 +44,7 @@ export default function ComicDetail(props) {
               </Link>
             </div>
             <div className="detail-wishlist-add">
-              <button className="detail-wishlist-add-button" onClick={(() => addComicToWishlist(user.id, comic._id))} >Add to List</button>
+              <button className="detail-wishlist-add-button" onClick={ user ? (() => addComicToWishlist(user.id, comic._id)) : null} >Add to List</button>
             </div>
             <div className="detail-description-card">
               <div className="detail-description">{comic.description}</div>
