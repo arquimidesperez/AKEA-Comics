@@ -12,7 +12,6 @@ export default function Wishlist() {
 
   const fetchComics = async () => {
     const allComics = await getUserWishlist(id);
-    console.log(allComics);
     setComics(allComics.wishlist);
   };
 
@@ -20,10 +19,11 @@ export default function Wishlist() {
     fetchComics();
   }, []);
 
+
   return (
     <>
       <Layout >
-        <div className="comics-card">
+        <div className="wishlist-card">
           {comics && comics.map((comic, index) => {
             return (
               <DeleteWishlist
@@ -33,6 +33,7 @@ export default function Wishlist() {
                 price={comic.price}
                 brand={comic.brand}
                 description={comic.description}
+                fetchComics={fetchComics}
                 key={index}
               />
             );

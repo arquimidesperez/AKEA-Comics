@@ -107,6 +107,16 @@
   font-weight: lighter;
 }
 
+.signup-login-button:active,
+.signup-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
+}
+
+.signup-login-button:hover,
+.signup-button:hover {
+  color: yellow;
+}
 /**
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
     MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY

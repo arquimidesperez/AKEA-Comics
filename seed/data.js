@@ -83,18 +83,18 @@ const insertData = async () => {
       backgroundImage: "https://wallpaperaccess.com/full/1238953.jpg",
     },
     {
-      title: "Constantine: The Hellblazer Vol. 2",
+      title: "Constantine: The Hellblazer #2",
       imgURL:
         "https://images-na.ssl-images-amazon.com/images/I/815CJFarARL.jpg",
       price: "3.99",
       brand: "DC",
       description:
-        "Ever since English occultist John Constantine moved to Manhattan, the city has grown more magical by the day—in a BAD way. The Swamp Thing is out of his element when Central Park itself begins eating the city's young lovers alive",
+        "Ever since English occultist John Constantine moved to Manhattan, the city has grown more magical by the day—in a BAD way.",
       backgroundImage:
         "https://i.pinimg.com/originals/93/3d/ce/933dce69af72f8ac12dcd0cd8453e27f.jpg",
     },
     {
-      title: "All-New X-Men Volume 1: Yesterday's X-Men",
+      title: "All-New X-Men #1: Yesterday's X-Men",
       imgURL:
         "https://images-na.ssl-images-amazon.com/images/I/51etC40z4TL._SX321_BO1,204,203,200_.jpg",
       price: "3.99",
@@ -111,7 +111,7 @@ const insertData = async () => {
       price: "3.99",
       brand: "DC",
       description:
-        "Not a dream, not an imaginary story, not an elseworld. This is Flash Fact: When Barry Allen wakes at his desk, he discovers the world has changed. Family is alive, loved ones are strangers, and close friends are different, gone or worse!",
+        "Not a dream, not an imaginary story, not an elseworld. This is Flash Fact: When Barry Allen wakes at his desk, he discovers the world has changed.",
       backgroundImage:
         "https://www.dccomics.com/sites/default/files/Char_Gallery_Flash_758_6055049612af35.61135649.jpg",
     },
@@ -121,7 +121,7 @@ const insertData = async () => {
       price: "3.99",
       brand: "Marvel",
       description:
-        "The Vision wants to be human, and what's more human than family? He goes to the laboratory where he was created, where Ultron molded him into a weapon, where he first rebelled against his given destiny, where he first imagined that he could be more, that he could be good, that he could be a man, a normal, ordinary man.",
+        "The Vision wants to be human, and what's more human than family?",
       backgroundImage:
         "https://wallpapercrafter.com/desktop/155678-Marvel-Comics-Vision-comic-art-artwork-colorful-face-glowing-eyes-comics-The-Avengers.jpg",
     },
@@ -131,29 +131,29 @@ const insertData = async () => {
       price: "2.99",
       brand: "DC",
       description:
-        "There's something rotten in Belle Reve Penitentiary, someone in the Suicide Squad has turned traitor, leaving America's deadliest super-team open to attack from a vast international conspiracy bent on destroying everything that Task Force X director Amanda Waller has built.",
+        "There's something rotten in Belle Reve Penitentiary, someone in the Suicide Squad has turned traitor.",
       backgroundImage:
         "https://a.scpr.org/i/c00e2173104583f15e387dcc0fd80b80/135279-eight.jpg",
     },
     {
-      title: "Captain Marvel: Earth's Mightiest Hero Vol. 2",
+      title: "Captain Marvel: Earth's Mightiest Hero #2",
       imgURL:
         "https://static.comicvine.com/uploads/original/11/117763/3016174-tumblr_ml4m6zffqm1s5xt2fo2_1280.jpg",
       price: "2.99",
       brand: "Marvel",
       description:
-        "Captain Marvel and the Avengers face the enemy within! When vicious echoes from the past of Earth's Mightiest Heroes crop up all over Manhattan, Carol Danvers refuses to be grounded by her recent and mysterious loss of power.",
+        "Captain Marvel and the Avengers face the enemy within! Carol Danvers refuses to be grounded by her recent and mysterious loss of power.",
       backgroundImage:
         "https://wallpapercave.com/wp/nPEiJh5.jpg",
     },
     {
-      title: "She-Hulk - Volume 8: Secret Invasion",
+      title: "She-Hulk #8: Secret Invasion",
       imgURL:
         "https://images-na.ssl-images-amazon.com/images/I/51kZG+P8nqL._SX323_BO1,204,203,200_.jpg",
       price: "3.99",
       brand: "DC",
       description:
-        "It's double the trouble as our gamma-ray glamazon finds herself on a collision course with the mystery-solving X-Factor and hip-deep in the Skrull infestation! What does She-Hulk's partner Jazinda - who just happens to be a Skrull - know about the invasion... and is she part of it?",
+        "It's double the trouble as our gamma-ray glamazon finds herself on a collision course with the mystery-solving X-Factor and hip-deep in the Skrull infestation!",
       backgroundImage:
         "https://imgix.kotaku.com.au/content/uploads/sites/3/2020/09/18/she-hulk-explainer.jpg?ar=16%3A9&auto=format&fit=crop&q=80&w=1280&nr=20",
     },
@@ -164,18 +164,18 @@ const insertData = async () => {
       price: "2.99",
       brand: "Marvel",
       description:
-        "Dr. Bruce Banner has been presumed dead since his execution, following his murderous rampage through Manhattan as the Hulk. But when reports start cropping up of an unidentified creature appearing around the globe, Nick Fury begins to get worried.",
+        "Dr. Bruce Banner has been presumed dead since his execution, following his murderous rampage through Manhattan as the Hulk.",
       backgroundImage:
         "https://static3.cbrimages.com/wordpress/wp-content/uploads/2019/05/ultimate-wolverine-hulk-featured.jpg",
     },
     {
-      title: "Swamp Thing Vol. 5: The Killing Field",
+      title: "Swamp Thing #5: The Killing Field",
       imgURL:
         "https://images-na.ssl-images-amazon.com/images/I/A1AENs577oL.jpg",
       price: "3.99",
       brand: "DC",
       description:
-        "Alec Holland knew little of the politics involved in becoming the The Green's Avatar, but since his role has been challenged, he must take a crash course in the politics and power of The Green.  The mantle of Avatar evolves over time, and when the Parliment decides an Avatar's time is at an end, a new one must be raised.",
+        "Alec Holland knew little of the politics involved in becoming the The Green's Avatar, but since his role has been challenged, he must take a crash course in the politics and power of The Green.",
       backgroundImage:
         "https://wallpaperaccess.com/full/2119447.jpg",
     },

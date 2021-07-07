@@ -27,7 +27,7 @@ export const CarouselData = [
   },
   {
     image: "https://images4.alphacoders.com/928/928450.jpg",
-    name: "Captian Marvel"
+    name: "Captain Marvel"
   },
   {
     image: "https://static3.cbrimages.com/wordpress/wp-content/uploads/2020/01/Freedom-Fighters-Uncle-Sam.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5",

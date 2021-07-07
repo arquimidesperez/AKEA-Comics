@@ -106,6 +106,22 @@ font-family: 'Bangers', cursive;
   background-color:#3477EA;
 }
 
+.detail-edit:active, 
+.detail-delete:active, .detail-purchase:active,
+.detail-wishlist-add-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
+}
+
+.detail-purchase:hover,
+.detail-wishlist-add-button:hover {
+  color: yellow;
+}
+
+.detail-edit:hover, 
+.detail-delete:hover {
+  color: black;
+}
 
 /**
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY

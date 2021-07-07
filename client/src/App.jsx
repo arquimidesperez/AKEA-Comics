@@ -5,7 +5,7 @@ import ComicBrowse from "./screens/ComicBrowse/ComicBrowse";
 import ComicCreate from "./screens/ComicCreate/ComicCreate";
 import ComicEdit from "./screens/ComicEdit/ComicEdit";
 import ComicDetail from "./screens/ComicDetail/ComicDetail";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { verifyUser } from "./services/users";
 import SignUp from "./screens/SignUp/SignUp";
 import Login from "./screens/Login/Login";

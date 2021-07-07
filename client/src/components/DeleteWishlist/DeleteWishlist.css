@@ -1,0 +1,104 @@
+.wishlist-image {
+  width: 165px;
+  height: 225px;
+}
+
+.wishlist-container {
+  font-family: "Marvel", sans-serif;
+  display: flex;
+  margin: 10px auto;
+  width: 165px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wishlist-cards-individuals {
+  padding-bottom: 10px;
+}
+
+.wishlist-title {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+
+.wishlist-brand {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.wishlist-button {
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
+  font-family: 'Bangers', cursive;
+  border: none;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+}
+
+.dc {
+  background-image: url("https://i.imgur.com/NceNWo2.jpg?1");
+  background-size: cover;
+}
+.marvel {
+  background-image: url("https://i.imgur.com/reo0jVY.jpg?1");
+  background-size: cover;
+}
+
+.wishlist-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
+}
+
+.wishlist-button:hover {
+  color: yellow;
+}
+
+/* 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+MEDIA QUERY MEDIA QUERY MEDIA QUERY MEDIA QUERY 
+*/
+
+@media only screen and (min-width: 800px) {
+
+  .wishlist-cards-individuals {
+    display: flex;
+    flex-direction: row;
+    width: 28vw;
+    padding: 0px;
+  }
+
+  .wishlist-container {
+    width: 28vw;
+  }
+
+  .wishlist-info-container {
+    margin: 0px auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+    width: 12vw;
+  }
+
+  .wishlist-title {
+    font-size: 1.5rem;
+  }
+
+  .wishlist-brand {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    
+  }
+
+
+}

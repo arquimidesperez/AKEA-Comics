@@ -60,6 +60,15 @@
   border: none;
 }
 
+.login-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
+}
+
+.login-button:hover {
+  color: yellow;
+}
+
 /**
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
     MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY

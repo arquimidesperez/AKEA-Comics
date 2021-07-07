@@ -6,23 +6,21 @@ import { removeComicFromWishlist } from "../../services/users";
 export default function DeleteWishlist(props) {
   const { id } = useParams();
 
-  // fetchComics() need to include into the onClick;
-
   return (
     <>
-      <div className={props.brand === 'Marvel' ? "comic-container marvel" : "comic-container dc"} >
-        <div className='comic-cards-individuals'>
-          <img className="comic-image" src={props.imgURL} alt={props.title} />
-          <div className='comic-info-container'>
-            <div className="comic-title">{props.title}</div>
-            <div className="comic-brand">{props.brand}</div>
+      <div className={props.brand === 'Marvel' ? "wishlist-container marvel" : "wishlist-container dc"} >
+        <div className='wishlist-cards-individuals'>
+          <img className="wishlist-image" src={props.imgURL} alt={props.title} />
+          <div className='wishlist-info-container'>
+            <div className="wishlist-title">{props.title}</div>
+            <div className="wishlist-brand">{props.brand}</div>
 
-            <button onClick={(() =>
+            <button className="wishlist-button" onClick={() => {
               removeComicFromWishlist(id, props._id)
-
-            )}
-
-            >Remove from List</button>
+              props.fetchComics()
+            }}>
+              Remove from List
+            </button>
           </div>
 
         </div>

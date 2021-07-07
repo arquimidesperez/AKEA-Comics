@@ -50,6 +50,7 @@
 }
 
 .left-arrow {
+  padding-left: 1vw;
   position: absolute;
   left: 2px;
   font-size: 2rem;
@@ -82,7 +83,7 @@
   }
 
   .carousel-image {
-    width: 150vw;
+    width: auto;
     height: 700px;
     object-fit: cover;
     object-position: top;
