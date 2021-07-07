@@ -28,9 +28,7 @@ export default function ComicDetail(props) {
   return (
     <Layout >
       <div className="detail-container">
-        {/* <div className='background-art-div'> */}
-        <img className="background-art" src={comic.backgroundImage} alt={comic.title} />
-        {/* </div> */}
+        <img className="background-art" src={comic.backgroundImage ? comic.backgroundImage : 'https://i.imgur.com/sdFHtFG.jpg'} alt={comic.title} />
         <div className={comic.brand === "Marvel" ? "detail-card marvel" : "detail-card dc"}>
           <img className="detail-art" src={comic.imgURL} alt={comic.title} />
           <div className="detail-information-card">

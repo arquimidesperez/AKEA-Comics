@@ -9,7 +9,7 @@ const Comic = new Schema(
     price: { type: Number, required: true },
     brand: { type: String, required: true },
     description: { type: String, required: true },
-    backgroundImage: { type: String, required: true }
+    backgroundImage: { type: String, required: false }
   },
   { timestamps: true }
 )
