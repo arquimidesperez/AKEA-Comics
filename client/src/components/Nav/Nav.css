@@ -15,14 +15,51 @@ font-family: 'Marvel', sans-serif;
   color: white;
 }
 
-a:hover,
-.logo:hover {
+.nav-div {
+  background-color: black;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  border: 2px black solid;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6);
+}
+
+.nav-link:hover{
   color: yellow;
 }
-.nav-div {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
+
+.drop-down-menu {
+  color: white;
+  margin: 0 auto;
+  padding: 15px;
+  width: 60vw;
+  font-family: "Bangers", cursive;
+  color: white;
+  text-shadow: rgb(238, 233, 233);
+}
+.nav-link-mobile:hover, .fa-bars:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.nav-link-mobile, .nav-user-link{
+  color: white;
+  margin: 10px auto;
+  width: 60vw;
+  font-family: "Bangers", cursive;
+  font-size: 1rem;
+  text-shadow: rgb(238, 233, 233);
+  display: block;
+}
+
+.drop-down-menu-open {
+  display: block;
+}
+
+.drop-down-menu-closed {
+  display: none;
 }
 
 .link-holder {
@@ -30,11 +67,14 @@ a:hover,
   flex-direction: row;
   justify-content: space-between;
   padding: 15px;
+  width: 60vw;
   text-decoration: none;
   font-family: "Bangers", cursive;
   color: white;
-  font-size: 19px;
+  font-size: 16px;
   text-shadow: rgb(238, 233, 233);
+  display: none;
+  align-items: center;
 }
 
 .nav-link {
@@ -47,33 +87,34 @@ a:hover,
   font-size: 1.1rem;
 }
 
-/**
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-**/
-
 @media only screen and (min-width: 800px) {
-  .nav-link {
+    .link-holder {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 10px;
+    text-decoration: none;
+    font-family: "Bangers", cursive;
+    color: white;
+    width: 90vw;
+    margin: 0px auto;
+    font-size: 1.0rem;
+  }
+
+  .drop-down-menu {
+    display: none;
+  }
+
+  .nav-link, .nav-user-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-family: "Bangers", cursive;
     color: white;
     font-size: 1.5rem;
-  }
-
-  .link-holder {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
-    text-decoration: none;
-    font-family: "Bangers", cursive;
-    color: white;
-    text-shadow: rgb(238, 233, 233);
-    width: 90vw;
-    margin: 0px auto;
+    width: 100%;
+    font-weight: 100;
   }
 }

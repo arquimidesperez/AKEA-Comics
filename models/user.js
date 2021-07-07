@@ -9,6 +9,7 @@ const User = new Schema(
     },
     email: { type: String, required: true },
     password_digest: { type: String, required: true, select: false },
+    wishlist: [{ type: Schema.Types.ObjectId, ref: 'comics' }]
   },
   { timestamps: true }
 );

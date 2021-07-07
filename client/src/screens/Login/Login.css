@@ -5,7 +5,8 @@
   align-items: center;
   height: 100vh;
   background-position-x: 50%;
-  background-size: 1430px;
+  background-size: cover;
+  margin-top: 100px;
 }
 
 .login-form {
@@ -59,13 +60,22 @@
   border: none;
 }
 
+.login-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
+}
+
+.login-button:hover {
+  color: yellow;
+}
+
 /**
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
     MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
 **/
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 
   .login-form {
     display: flex;

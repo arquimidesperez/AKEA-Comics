@@ -2,21 +2,23 @@
   background-color: #202020;
   padding-top: 70px;
   padding-bottom: 70px;
+  margin-top: 100px;
 }
 
 .purchase-container {
   width: 70vw;
-  padding: 20px;
   margin: 0 auto;
   box-shadow: 2px 2px 2px black;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .comicbook-art {
-  max-width: 60vw;
+  max-width: 70vw;
 }
 
 .purchase-information {
-  margin: 20px 20px;
+  margin: 10px;
   font-family: "Marvel", sans-serif;
   font-size: 1rem;
   color: white;
@@ -25,6 +27,11 @@
 
 .comic-title-purchase {
   font-size: 1.4rem;
+}
+
+.purchase-email{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .marvel {
@@ -43,34 +50,39 @@
 
 @media only screen and (min-width: 800px) {
   .purchase-container {
+    width: 60vw;
     display: flex;
-    max-width: 60vw;
-    padding: 20px 10px 20px 10px;
-    justify-content: space-evenly;
+    padding-bottom: 0px;
   }
 
   .comicbook-art {
-    width: 20vw;
+    width: 25vw;
   }
 
   .purchase-information {
+    width: 30vw;
+    height: fit-content;
+    margin: 0 auto;
     margin-top: auto;
     margin-bottom: auto;
     font-size: 1.5rem;
-    max-width: 250px;
     font-family: "Marvel", sans-serif;
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  } 
+
+  .comic-title-purchase{
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .purchase-info-conditional {
-    max-width: 90%
+    width: fit-content;
   }
 
   .comic-title-purchase {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
 }

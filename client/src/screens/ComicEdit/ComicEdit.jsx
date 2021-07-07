@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import './ComicEdit.css'
 import { Layout } from "../../components";
 import { getComic, updateComic } from "../../services/comics";
 import { useParams, Redirect } from "react-router-dom";
+import { userContext } from "../../utils/Context";
+import SignUp from "../SignUp/SignUp";
 
 export default function ComicEdit(props) {
+  const user = useContext(userContext)
   const [comic, setComic] = useState({
     title: "",
     imgURL: "",
@@ -21,7 +24,7 @@ export default function ComicEdit(props) {
       setComic(comic);
     };
     fetchComic();
-  }, [id]);
+  }, [id, props.user]);
   // eslint-disable-next-line
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,24 +44,22 @@ export default function ComicEdit(props) {
     return <Redirect to={`/comics/${id}`} />;
   }
 
-  return (
-    <Layout user={props.user}>
+  if (!user) {
+    return <SignUp />
+  } else return (
+    <Layout >
       <div className="comic-edit">
-
-      <h3 className='editor-text'>Edit</h3>
-        
         <div className={comic.brand === 'Marvel' ? "editor-container marvel" : "editor-container dc"}>
-            <div className="image-container">
-              <img
-                className="edit-product-image"
-                src={comic.imgURL}
-                alt={comic.name}
-              />
-            </div>
-          
-            <div className='edit-information'>
+          <img
+            className="edit-product-image"
+            src={comic.imgURL}
+            alt={comic.name}
+          />
+
+          <div className='edit-information'>
             <form onSubmit={handleSubmit}>
-            <input
+              <div className='editor-text'> Title </div>
+              <input
                 className="input-name"
                 placeholder="title"
                 value={comic.title}
@@ -69,15 +70,17 @@ export default function ComicEdit(props) {
               />
             </form>
             <form className="edit-form" onSubmit={handleSubmit}>
-            <input
-                  className="input-image-link"
-                  placeholder="Image Link"
-                  value={comic.imgURL}
-                  name="imgURL"
-                  required
-                  onChange={handleChange}
-                />
-              <br />
+              <div className='editor-text'> Image Source </div>
+              <input
+                className="input-image-link"
+                placeholder="Image Link"
+                value={comic.imgURL}
+                name="imgURL"
+                required
+                onChange={handleChange}
+              />
+
+              <div className='editor-text'> Price </div>
               <input
                 className="input-price"
                 placeholder="Price"
@@ -86,7 +89,8 @@ export default function ComicEdit(props) {
                 required
                 onChange={handleChange}
               />
-              <br />
+
+              <div className='editor-text'> Brand </div>
               <input
                 className="input-brand"
                 placeholder="DC or Marvel"
@@ -95,9 +99,7 @@ export default function ComicEdit(props) {
                 required
                 onChange={handleChange}
               />
-              <div className='editor-text'>
-              Description:
-              </div>
+              <div className='editor-text'> Summary </div>
               <textarea
                 className="textarea-description"
                 rows={10}
@@ -110,14 +112,14 @@ export default function ComicEdit(props) {
               />
               <br />
               <button type="submit" className="save-button">
-                Save Changes
+                Save Edits
               </button>
-          </form>
-            </div>
-            
+            </form>
+          </div>
+
 
         </div>
-        
+
       </div>
     </Layout>
   );

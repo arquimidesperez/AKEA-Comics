@@ -5,32 +5,41 @@
   padding-bottom: 60px;
   text-align: center;
   color: white;
+  margin-top: 40px;
+}
+
+.background-art{
+  width: 375px;
 }
 
 .detail-card {
   width: 70vw;
-  padding-bottom: 10px;
   margin: 0 auto;
-  /* display: flex; */
+  margin-top: -5vh;
+  z-index: 10;
 }
 
 .detail-art {
   width: 70vw;
+  z-index: 10;
 }
 
 .detail-information-card {
   font-family: 'Marvel', sans-serif;
   width: 60vw;
-  margin: 0 auto;
+  margin: 0px auto;
   justify-content: center;
+
 }
 
 .detail-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   margin: 10px
 }
+
 .detail-brand-price {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 10px;
   font-weight: bold;
 }
@@ -39,17 +48,19 @@
   font-size: 1.4rem
 }
 
-.detail-purchase-card {
+.detail-purchase-card, .detail-wishlist-add {
 font-family: 'Bangers', cursive;
 }
 
-.detail-purchase {
-  background-color: #202020;
-  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+.detail-purchase, .detail-wishlist-add-button {
+  width: 100px;
+  height: 33px;
   font-family: 'Bangers', cursive;
-  color: white;
-  padding: 5px;
+  border: none;
   font-size: 1rem;
+  background-color: black;
+  color: white;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
 }
 
 .detail-description-card {
@@ -62,7 +73,9 @@ font-family: 'Bangers', cursive;
   font-family: 'Marvel', sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  margin-top: 10px;
+  line-height: 1.5rem;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .detail-buttons{
@@ -74,124 +87,104 @@ font-family: 'Bangers', cursive;
 
 .detail-edit, 
 .detail-delete {
-  background-color: #CD352D;
-  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
+  margin-top: 10px;
+  width: 100px;
+  height: 33px;
   font-family: 'Bangers', cursive;
-  color: white;
-  padding: 5px;
-  font-size: 1.2rem;
-  width: 15vw;
-}
-
-.marvel{
+  border: none;
+  font-size: 1rem;
   background-color: #CD352D;
+  color: white;
+  clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
 }
 
-.dc{
-  background-color:#3477EA;
+
+.detail-edit:active, 
+.detail-delete:active, .detail-purchase:active,
+.detail-wishlist-add-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
 }
 
-/**
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY      
-**/
+.detail-purchase:hover,
+.detail-wishlist-add-button:hover {
+  color: yellow;
+}
+
+.detail-edit:hover, 
+.detail-delete:hover {
+  color: black;
+}
 
 @media only screen and (min-width: 800px) {
+
+  .background-art{
+    height: 350px;
+    width: 100vw;
+    object-fit: cover;
+    z-index: 0;
+    position: relative;
+    border-bottom: 40px solid white;
+    object-position: 0% 10%;
+  }
+
   .detail-card{
-      max-width: 70vw;
-      /* padding: 20px; */
-      margin: 0 auto;
-      display: flex;
-  }
-
-  /* .detail-cover {
-    margin: 0 auto;
-    width: 300px;
-    height: 345px;
-    overflow: hidden;
-    border: 1px whitesmoke solid;
-    } */
-  
-  .detail-art {
-    width: 20vw;
-    /* display: flex;
-    justify-content: center;
-    width: 100%; */
-    /* height: auto; */
-    /* object-fit:contain */
-  }
-
-  .detail-buttons{
+    width: 60vw;
     display: flex;
-    width: 50vw;
-    margin: 10px auto;
-    justify-content: space-evenly;
-  }
-  
-  .detail-edit, 
-  .detail-delete {
-    background-color: #CD352D;
-    clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
-    font-family: 'Bangers', cursive;
-    color: white;
-    font-size: 1.4rem;
-    padding: 5px;
-    width: 8vw;
+    z-index: 0;    
+    position: relative;
+    margin-top: -15vh;
   }
 
-  /* details information card */
+  .detail-art {
+    width: 25vw;
+    z-index: 0;
+    position: relative;
+  }
+
   .detail-information-card{
-    width: 50vw;
-    margin: 0px auto;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30vw;
+    height: fit-content;
   }
 
   .detail-title {
-    font-size: 2rem;
-    margin: 10px
+    font-size: 2.5rem;
+    width: 20vw;
+    margin: 0 auto;
   }
+
   .detail-brand-price {
-    font-size: 1.2rem;
-    margin: 10px;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
-  .detail-purchase-card {
-    font-family: 'Bangers', cursive;
-    }
-  
-  .detail-description-card {
-    /* margin: 10px 0 0 0;
-    font-family: 'Marvel', sans-serif;
-    display: flex; */
+  .detail-price {
+    font-size: 1.8rem
   }
 
-  .detail-description {
-    /* width: 20vw;
+  .detail-purchase-card, .detail-wishlist-add {
+    margin: 10px 10px;
+    font-family: 'Bangers', cursive;
+  }
+
+  .detail-description-card {
     font-family: 'Marvel', sans-serif;
     font-size: 1rem;
-    font-weight: bold; */
+    display: flex;
+  }
+  
+  .detail-description {
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 
-  .detail-purchase {
-    background-color: #202020;
-    clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
-    font-family: 'Bangers', cursive;
-    color: white;
-    padding: 5px;
-    font-size: 1.4rem;
-  }
 
-  .detail-price {
-    font-size: 1.4rem
-  }
 
 }

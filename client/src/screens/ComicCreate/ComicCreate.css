@@ -2,11 +2,13 @@
   background-color: #202020;
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-top: 100px;
 }
 
 .create-form {
   margin: 0px auto;
-  background-color: #cd352d;
+  background-image: url("https://i.imgur.com/sdFHtFG.jpg");
+  background-position: center;
   width: 70vw;
   padding: 25px 10px 25px 10px;
   box-shadow: 3px 3px 3px black;
@@ -67,16 +69,19 @@
   clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
 }
 
-/**
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-    MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
-**/
+.create-submit-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
+}
 
-@media only screen and (min-width: 800px) {
+.create-submit-button:hover {
+  color: yellow;
+}
+
+@media only screen and (min-width: 1000px) {
 
   .comic-create {
-    background-image: url(https://cdn.wallpapersafari.com/12/66/KoreDc.jpg);
+    background-color: #202020;
     background-size: cover;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -86,21 +91,12 @@
   .create-form {
     margin: 0px auto;
     background-color: #cd352d;
-    width: 30vw;
+    width: 35vw;
     height: 70vh;
     padding: 25px 10px 25px 10px;
     box-shadow: 3px 3px 3px black;
-    /* background-color: #cd352d;
-    width: 40vw;
-    height: 80vh;
-    margin: 0px auto;
-    box-shadow: 3px 3px 3px black;
-    margin: 0 auto;
-    justify-content: space-evenly; */
   }
-
-  /* edit these */
-
+  
   .create-form-title {
     color: white;
     font-size: 36px;

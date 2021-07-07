@@ -1,11 +1,13 @@
-import { useState } from 'react'
 import './Login.css'
-// import Nav from '../Nav/Nav'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
 import { Layout } from "../../components";
+import { useState, useContext } from "react";
+import { setUserContext } from '../../utils/Context'
 
-const Login = (props) => {
+
+const Login = () => {
+  const setUser = useContext(setUserContext)
   const history = useHistory()
 
   const [form, setForm] = useState({
@@ -24,7 +26,6 @@ const Login = (props) => {
 
   const onLogin = async (event) => {
     event.preventDefault()
-    const { setUser } = props
     try {
       const user = await signIn(form)
       setUser(user)
@@ -57,40 +58,40 @@ const Login = (props) => {
 
   return (
     <Layout>
-    <div className='login-container'>
-        
+      <div className='login-container'>
+
         <div className='login-form'>
 
-        <p className='login-form-header'>LOGIN</p>
-          
-          <form onSubmit={onLogin}>
-            
-          <div className='login-email-div'>
-            <input className='login-email-input' 
-              required
-              type='text'
-              name='email'
-              value={email}
-              placeholder='Email'
-              onChange={handleChange}
-            />
-          </div>
+          <p className='login-form-header'>LOGIN</p>
 
-          <div className='login-password-div'>
-            <input className='login-password-input'
-              required
-              name='password'
-              value={password}
-              type='password'
-              placeholder='Password'
-              onChange={handleChange}
-            />
+          <form onSubmit={onLogin}>
+
+            <div className='login-email-div'>
+              <input className='login-email-input'
+                required
+                type='text'
+                name='email'
+                value={email}
+                placeholder='Email'
+                onChange={handleChange}
+              />
             </div>
-            
+
+            <div className='login-password-div'>
+              <input className='login-password-input'
+                required
+                name='password'
+                value={password}
+                type='password'
+                placeholder='Password'
+                onChange={handleChange}
+              />
+            </div>
+
             {renderError()}
-            
-        </form>
-      </div>
+
+          </form>
+        </div>
       </div>
     </Layout>
   )
