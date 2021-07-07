@@ -8,20 +8,16 @@
   margin-top: 100px;
 }
 
+.carousel-image {
+  width: 165vw;
+  height: 340px;
+  margin-top: 70px;
+}
+
 .carousel-message {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-}
-
-.carousel-image {
-  width: 165vw;
-  margin-top: 70px;
-  
-}
-
-.carousel-message {
   color: white;
   font-family: "Bangers", cursive;
   font-size: 35px;
@@ -31,7 +27,7 @@
 .carousel-month {
   color: yellow;
   margin-top: 5px;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .carousel-name {
@@ -41,7 +37,7 @@
 
 .right-arrow {
   position: absolute;
-  right: 2px;
+  right: 1px;
   font-size: 2rem;
   color: white;
   z-index: 10;
@@ -52,7 +48,7 @@
 .left-arrow {
   padding-left: 1vw;
   position: absolute;
-  left: 2px;
+  left: 1px;
   font-size: 2rem;
   color: white;
   z-index: 10;
@@ -62,26 +58,48 @@
 
 .cover {
   opacity: 0;
-  transition-duration: 1sec ease;
+  transition-duration: 3s ease-out;
 }
 
 .cover-active {
-  opacity: 5;
-  transition-duration: 5sec;
+  opacity: 1;
+  transition-duration: 3s;
   transform: scale(0.5);
+}
+
+@media only screen and (min-width: 500px) {
+
+  .carousel {
+    height: 45vh;
+    margin-top: 85px;
+  }
+  .carousel-image {
+    width: 175vw;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+  }
+  .carousel-message {
+    font-size: 3rem;
+  }
+  .right-arrow {
+    position: absolute;
+    right: 2px;
+    font-size: 2rem;
+  }
+
+  .left-arrow {
+    position: absolute;
+    left: 2px;
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 800px) {
   .carousel {
-    display: flex;
-    flex-direction: column;
     height: 60vh;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
     margin-top: 100px;
   }
-
   .carousel-image {
     width: auto;
     height: 700px;
@@ -89,10 +107,19 @@
     object-position: top;
   }
 
+  .right-arrow {
+    position: absolute;
+    right: 3px;
+    font-size: 3rem;
+  }
+
+  .left-arrow {
+    position: absolute;
+    left: 3px;
+    font-size: 3rem;
+  }
+
   .carousel-message {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     font-size: 4rem;
   }
 
@@ -102,7 +129,28 @@
     margin-bottom: 0;
   }
 
-  .carousel-name {
-    color: white;
+}
+@media only screen and (min-width: 1000px) {
+
+  .carousel-image {
+    height: 800px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .carousel-message {
+    font-size: 5rem;
+  }
+
+  .right-arrow {
+    position: absolute;
+    right: 10px;
+    font-size: 3rem;
+  }
+
+  .left-arrow {
+    position: absolute;
+    left: 10px;
+    font-size: 3rem;
   }
 }
