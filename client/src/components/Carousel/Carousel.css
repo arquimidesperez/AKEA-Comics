@@ -133,13 +133,15 @@
 @media only screen and (min-width: 1000px) {
 
   .carousel-image {
-    height: 700px;
+    width: 115vw;
+    height: 650px;
     object-fit: cover;
     object-position: top;
+    margin-top: 100px;
   }
 
   .carousel-message {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .right-arrow {

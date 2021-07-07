@@ -49,8 +49,8 @@ const Nav = () => {
           <NavLink className="nav-link" to="/comics">Browse</NavLink>
           {user ? (<NavLink className="nav-link" to="/create-comic">Create</NavLink>) : (<NavLink className="nav-link" to="/signup">Create</NavLink>)}
           {user ? (<div className="nav-link">Welcome {user.username}</div>) : (<NavLink className="nav-link" to="/signup">Sign Up</NavLink>)}
-          {user ? (<NavLink user={user} className="nav-user-link" to="/change-password">Change Password</NavLink>) : (null)}
-          {user ? (<NavLink user={user} className="nav-user-link" to={`/users/${user?.id}/wishlist`}>Wishlist</NavLink>) : (null)}
+          {user ? (<NavLink user={user} className="nav-link" to="/change-password">Change Password</NavLink>) : (null)}
+          {user ? (<NavLink user={user} className="nav-link" to={`/users/${user?.id}/wishlist`}>Wishlist</NavLink>) : (null)}
           {user ? (<NavLink className="nav-link" to="/logout">Logout</NavLink>) : (<NavLink className="nav-link" to="/login">Login</NavLink>)}
         </div>
       </div>

@@ -39,6 +39,10 @@ font-family: 'Marvel', sans-serif;
   color: white;
   text-shadow: rgb(238, 233, 233);
 }
+.nav-link-mobile:hover, .fa-bars:hover {
+  color: yellow;
+  cursor: pointer;
+}
 
 .nav-link-mobile, .nav-user-link{
   color: white;
