@@ -23,7 +23,7 @@ export default function Wishlist() {
     const updatedWishlist = wishlist.filter((comic) => comic._id !== comicId)
     setWishlist(updatedWishlist)
   }
-  console.log("test")
+
   return (
     <>
       <Layout >
