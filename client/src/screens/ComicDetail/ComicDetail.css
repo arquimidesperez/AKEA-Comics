@@ -98,13 +98,6 @@ font-family: 'Bangers', cursive;
   clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
 }
 
-.marvel{
-  background-color: #CD352D;
-}
-
-.dc{
-  background-color:#3477EA;
-}
 
 .detail-edit:active, 
 .detail-delete:active, .detail-purchase:active,
@@ -123,22 +116,7 @@ font-family: 'Bangers', cursive;
   color: black;
 }
 
-/**
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
-**/
-
 @media only screen and (min-width: 800px) {
-
-  /* .background-art-div{
-    z-index: 0;
-  } */
-
-  /* z-index defaults to position static 
-    makes it harder to establish stacking context
-    need to use position absolute/relative to make it work
-  */
 
   .background-art{
     height: 350px;
@@ -208,36 +186,5 @@ font-family: 'Bangers', cursive;
   }
 
 
-/* 
-  .detail-buttons{
-    display: flex;
-    width: 50vw;
-    margin: 10px auto;
-    justify-content: space-evenly;
-  }
-  
-  .detail-edit, 
-  .detail-delete {
-    background-color: #CD352D;
-    clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
-    font-family: 'Bangers', cursive;
-    color: white;
-    font-size: 1.4rem;
-    padding: 5px; 
-    width: 8vw;
-  }
-*/
-
-  /*
-
-  .detail-purchase {
-    background-color: #202020;
-    clip-path: polygon(12% 0, 100% 0, 100% 75%, 88% 100%, 0 100%, 0 25%);
-    font-family: 'Bangers', cursive;
-    color: white;
-    font-size: 1.4rem;
-  }
-
- */
 
 }

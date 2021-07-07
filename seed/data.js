@@ -20,7 +20,17 @@ const insertData = async () => {
     password_digest: await bcrypt.hash('wishlist', 11),
     wishlist: [],
   })
+
   await user2.save()
+
+  const user3 = new User({
+    username: 'kevin',
+    email: 'kevin@gmail.com',
+    password_digest: await bcrypt.hash('kwand1', 11),
+    wishlist: [],
+  })
+
+  await user3.save()
 
   const comics = [
     {
