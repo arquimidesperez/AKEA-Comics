@@ -1,9 +1,9 @@
 .footer-div {
   background-color: black;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   bottom: 0;
   position: sticky;
-  width: 100vw;
+  width: 98vw;
   display: flex;
   flex: 1;
   margin-top: auto;
@@ -16,6 +16,7 @@
   font-family: "Bangers", cursive;
   font-size: 1.2rem;
   text-align: left;
+  
 }
 
 .footer-link-holder {

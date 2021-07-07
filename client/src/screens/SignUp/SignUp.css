@@ -107,13 +107,23 @@
   font-weight: lighter;
 }
 
+.signup-login-button:active,
+.signup-button:active {
+  opacity: 50%;
+  border: 2px solid yellow;
+}
+
+.signup-login-button:hover,
+.signup-button:hover {
+  color: yellow;
+}
 /**
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
     MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
 **/
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 
   .signup-container {
     display:flex;

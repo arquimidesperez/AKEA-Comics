@@ -22,7 +22,7 @@ a:hover,
 
 .nav-div {
   background-color: black;
-  height: fit-content;
+  height: auto;
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -42,6 +42,7 @@ a:hover,
   color: white;
   text-shadow: rgb(238, 233, 233);
 }
+
 .drop-down-menu:hover {
   cursor: pointer;
   color: yellow;
@@ -77,9 +78,10 @@ a:hover,
   text-decoration: none;
   font-family: "Bangers", cursive;
   color: white;
-  font-size: 19px;
+  font-size: 16px;
   text-shadow: rgb(238, 233, 233);
   display: none;
+  align-items: center;
 }
 
 .nav-link {
@@ -98,31 +100,34 @@ a:hover,
 **/
 
 @media only screen and (min-width: 800px) {
-  .nav-link {
+    .link-holder {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 10px;
     text-decoration: none;
     font-family: "Bangers", cursive;
     color: white;
-    font-size: 1.5rem;
-    width: 100%;
+    width: 90vw;
+    margin: 0px auto;
+    font-size: 1.0rem;
   }
 
   .drop-down-menu {
     display: none;
   }
+  
 
-  .link-holder {
+  .nav-link, .nav-user-link {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-family: "Bangers", cursive;
     color: white;
-    width: 80vw;
-    margin: 0px auto;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: 100;
   }
 }

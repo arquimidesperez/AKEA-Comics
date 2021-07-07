@@ -1,0 +1,6 @@
+.wishlist-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 120px;
+  padding-bottom: 70px;
+}
