@@ -25,7 +25,7 @@ export default function Carousel({ covers }) {
       <BiRightArrow className="right-arrow" onClick={nextCover} />
       {CarouselData.map((covers, index) => {
         return (
-          <div className={index === current ? "cover-active" : "cover"}>
+          <div key={index} className={index === current ? "cover-active" : "cover"}>
             {index === current && (
               <div>
                 <img
