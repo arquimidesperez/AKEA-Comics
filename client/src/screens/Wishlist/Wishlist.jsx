@@ -17,6 +17,7 @@ export default function Wishlist() {
     };
 
     fetchWishlist();
+    // eslint-disable-next-line
   }, []);
 
   const removeFromWishlist = (comicId) => {
