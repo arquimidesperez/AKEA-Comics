@@ -1,33 +1,24 @@
 import React from 'react'
-import { Layout, ComicCards } from "../../components";
+import { Layout } from "../../components";
 import { useState, useEffect } from "react";
-import { getUserWishlist, removeComicFromWishlist } from "../../services/users";
+import { getUserWishlist } from "../../services/users";
 import "./Wishlist.css";
 import { useParams } from 'react-router-dom';
+import DeleteWishlist from '../../components/DeleteWishlist/DeleteWishlist';
 
 export default function Wishlist() {
   const { id } = useParams()
   const [comics, setComics] = useState();
 
+  const fetchComics = async () => {
+    const allComics = await getUserWishlist(id);
+    console.log(allComics);
+    setComics(allComics.wishlist);
+  };
+
   useEffect(() => {
-    const fetchComics = async () => {
-      const allComics = await getUserWishlist(id);
-      console.log(allComics);
-      setComics(allComics.wishlist);
-    };
     fetchComics();
   }, []);
-
-  // const handleChange = (e) => {
-  //   const selection = e.target.value;
-  //   setComics(apiData);
-  //   if (selection !== "All") {
-  //     const filteredComics = apiData.filter(
-  //       (comic) => comic.brand === selection
-  //     );
-  //     setComics(filteredComics);
-  //   }
-  // };
 
   return (
     <>
@@ -35,7 +26,7 @@ export default function Wishlist() {
         <div className="comics-card">
           {comics && comics.map((comic, index) => {
             return (
-              <ComicCards
+              <DeleteWishlist
                 _id={comic._id}
                 title={comic.title}
                 imgURL={comic.imgURL}

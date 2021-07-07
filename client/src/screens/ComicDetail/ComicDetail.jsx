@@ -43,19 +43,11 @@ export default function ComicDetail(props) {
                 <button className="detail-purchase">Buy Now</button>
               </Link>
             </div>
-            <div className="detail-description-card">
-              <div className="detail-description">{comic.description}</div>
-            </div>
             <div className="detail-wishlist-add">
               <button className="detail-wishlist-add-button" onClick={(() => addComicToWishlist(user.id, comic._id))} >Add to List</button>
             </div>
-            <div className="detail-wishlist-route">
-              <Link to={`/users/${user?.id}/wishlist`} user={user}>
-                <button className="detail-wishlist-route-button" >
-                  Go to List
-                  {/* <Redirect to={`/comics/`} /> */}
-                </button>
-              </Link>
+            <div className="detail-description-card">
+              <div className="detail-description">{comic.description}</div>
             </div>
           </div>
         </div>

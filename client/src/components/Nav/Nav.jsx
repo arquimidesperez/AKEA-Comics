@@ -69,7 +69,13 @@ const Nav = () => {
           ) : (
             null
           )}
-
+          {user ? (
+            <NavLink user={user} className="nav-link" to={`/users/${user?.id}/wishlist`}>
+              Wishlist
+            </NavLink>
+          ) : (
+            null
+          )}
         </div>
       </div>
     </nav>

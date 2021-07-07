@@ -48,11 +48,11 @@
   font-size: 1.4rem
 }
 
-.detail-purchase-card {
+.detail-purchase-card, .detail-wishlist-add {
 font-family: 'Bangers', cursive;
 }
 
-.detail-purchase {
+.detail-purchase, .detail-wishlist-add-button {
   width: 100px;
   height: 33px;
   font-family: 'Bangers', cursive;
@@ -171,7 +171,7 @@ font-family: 'Bangers', cursive;
     font-size: 1.8rem
   }
 
-  .detail-purchase-card {
+  .detail-purchase-card, .detail-wishlist-add {
     margin: 10px 10px;
     font-family: 'Bangers', cursive;
   }
