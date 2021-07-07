@@ -1,9 +1,9 @@
 import React from "react";
-import "./DeleteWishlist.css";
+import "./WishlistCard.css";
 import { useParams } from "react-router-dom";
 import { removeComicFromWishlist } from "../../services/users";
 
-export default function DeleteWishlist(props) {
+export default function WishlistCard(props) {
   const { id } = useParams();
 
   return (
@@ -17,7 +17,7 @@ export default function DeleteWishlist(props) {
 
             <button className="wishlist-button" onClick={() => {
               removeComicFromWishlist(id, props._id)
-              props.fetchComics()
+              props.removeFromWishlist(props._id)
             }}>
               Remove from List
             </button>
