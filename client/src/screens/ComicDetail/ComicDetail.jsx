@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./ComicDetail.css";
 import { Layout } from "../../components";
 import { getComic, deleteComic } from "../../services/comics";
+import { addComicToWishlist } from "../../services/users";
 import { useParams, Link } from "react-router-dom";
 
 export default function ComicDetail(props) {
@@ -14,7 +15,6 @@ export default function ComicDetail(props) {
       const comic = await getComic(id);
       setComic(comic);
       setLoaded(true);
-      console.log(comic);
     };
     fetchComic();
   }, [id]);
@@ -26,50 +26,49 @@ export default function ComicDetail(props) {
   return (
     <Layout user={props.user}>
       <div className="detail-container">
-
-                {/* <div className='background-art-div'> */}
-                <img className="background-art" src={comic.backgroundImage} alt={comic.title} />
+        {/* <div className='background-art-div'> */}
+        <img className="background-art" src={comic.backgroundImage} alt={comic.title} />
         {/* </div> */}
-        
         <div className={comic.brand === "Marvel" ? "detail-card marvel" : "detail-card dc"}>
-            <img className="detail-art" src={comic.imgURL} alt={comic.title} />
-
+          <img className="detail-art" src={comic.imgURL} alt={comic.title} />
           <div className="detail-information-card">
-            
-              <div className="detail-title">{comic.title}</div>
-                <div className="detail-brand-price">
-                  Universe: {comic.brand} <br/> Price:{" "} <span className="detail-price">${comic.price}</span>
-                </div>
-              <div className="detail-purchase-card">
-                <Link to={`/purchase/${id}`}>
-                  <button className="detail-purchase">Buy Now</button>
-                </Link> 
-              </div>
-
-                  <div className="detail-description-card">
-                    <div className="detail-description">{comic.description}</div>
-                  </div>
+            <div className="detail-title">{comic.title}</div>
+            <div className="detail-brand-price">
+              Universe: {comic.brand} <br /> Price:{" "} <span className="detail-price">${comic.price}</span>
             </div>
+            <div className="detail-purchase-card">
+              <Link to={`/purchase/${id}`}>
+                <button className="detail-purchase">Buy Now</button>
+              </Link>
+            </div>
+            <div className="detail-description-card">
+              <div className="detail-description">{comic.description}</div>
+            </div>
+            <div className="detail-wishlist-add">
+              <button className="detail-wishlist-add-button" onClick={(() => addComicToWishlist(props.user.id, comic._id))} >Add to List</button>
+            </div>
+            <div className="detail-wishlist-route">
+              <Link to={`/users/${props?.user?.id}/wishlist`} user={props?.user}>
+                <button className="detail-wishlist-route-button" >
+                  Go to List
+                  {/* <Redirect to={`/comics/`} /> */}
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
-
-        
-
-                                  <div className="detail-buttons">
-
-                                    <div>
-                                      <Link to={`/edit-comic/${id}`}>
-                                        <button className="detail-edit">Edit</button>
-                                      </Link>
-                                    </div>
-
-                                    <div>
-                                      <Link to="/comics">
-                                        <button className="detail-delete" onClick={() => deleteComic(comic._id)}>Delete </button>
-                                      </Link>
-                                    </div>
-
-                                  </div>
-        
+        <div className="detail-buttons">
+          <div>
+            <Link to={`/edit-comic/${id}`}>
+              <button className="detail-edit">Edit</button>
+            </Link>
+          </div>
+          <div>
+            <Link to="/comics">
+              <button className="detail-delete" onClick={() => deleteComic(comic._id)}>Delete </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </Layout>
   );

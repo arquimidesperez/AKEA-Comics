@@ -12,9 +12,10 @@ import Login from "./screens/Login/Login";
 import Logout from "./screens/Logout/Logout";
 import Purchase from "./screens/Purchase/Purchase";
 import UpdatePassword from "./screens/UpdatePassword/UpdatePassword";
+import Wishlist from "./screens/Wishlist/Wishlist";
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -37,7 +38,7 @@ const App = () => {
           <ComicDetail user={user} />
         </Route>
         <Route exact path="/edit-comic/:id">
-          {user ? <ComicEdit user={user} /> : <Redirect to="/signup" />}
+          {user ? <ComicEdit user={user} /> : <Redirect to="/comics" />}
         </Route>
         <Route exact path="/comics">
           <ComicBrowse user={user} />
@@ -56,6 +57,9 @@ const App = () => {
         </Route>
         <Route exact path="/change-password">
           <UpdatePassword setUser={setUser} user={user} />
+        </Route>
+        <Route exact path="/users/:id/wishlist">
+          <Wishlist user={user} />
         </Route>
       </Switch>
     </div>

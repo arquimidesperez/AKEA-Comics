@@ -57,40 +57,40 @@ const Login = (props) => {
 
   return (
     <Layout>
-    <div className='login-container'>
-        
+      <div className='login-container'>
+
         <div className='login-form'>
 
-        <p className='login-form-header'>LOGIN</p>
-          
-          <form onSubmit={onLogin}>
-            
-          <div className='login-email-div'>
-            <input className='login-email-input' 
-              required
-              type='text'
-              name='email'
-              value={email}
-              placeholder='Email'
-              onChange={handleChange}
-            />
-          </div>
+          <p className='login-form-header'>LOGIN</p>
 
-          <div className='login-password-div'>
-            <input className='login-password-input'
-              required
-              name='password'
-              value={password}
-              type='password'
-              placeholder='Password'
-              onChange={handleChange}
-            />
+          <form onSubmit={onLogin}>
+
+            <div className='login-email-div'>
+              <input className='login-email-input'
+                required
+                type='text'
+                name='email'
+                value={email}
+                placeholder='Email'
+                onChange={handleChange}
+              />
             </div>
-            
+
+            <div className='login-password-div'>
+              <input className='login-password-input'
+                required
+                name='password'
+                value={password}
+                type='password'
+                placeholder='Password'
+                onChange={handleChange}
+              />
+            </div>
+
             {renderError()}
-            
-        </form>
-      </div>
+
+          </form>
+        </div>
       </div>
     </Layout>
   )

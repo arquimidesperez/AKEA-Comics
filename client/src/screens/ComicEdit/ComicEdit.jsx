@@ -21,7 +21,7 @@ export default function ComicEdit(props) {
       setComic(comic);
     };
     fetchComic();
-  }, [id]);
+  }, [id, props.user]);
   // eslint-disable-next-line
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,18 +44,17 @@ export default function ComicEdit(props) {
   return (
     <Layout user={props.user}>
       <div className="comic-edit">
-        
         <div className={comic.brand === 'Marvel' ? "editor-container marvel" : "editor-container dc"}>
-              <img
-                className="edit-product-image"
-                src={comic.imgURL}
-                alt={comic.name}
-              />
-          
-            <div className='edit-information'>
+          <img
+            className="edit-product-image"
+            src={comic.imgURL}
+            alt={comic.name}
+          />
+
+          <div className='edit-information'>
             <form onSubmit={handleSubmit}>
-            <div className='editor-text'> Title </div>
-            <input
+              <div className='editor-text'> Title </div>
+              <input
                 className="input-name"
                 placeholder="title"
                 value={comic.title}
@@ -66,15 +65,15 @@ export default function ComicEdit(props) {
               />
             </form>
             <form className="edit-form" onSubmit={handleSubmit}>
-            <div className='editor-text'> Image Source </div>
-            <input
-                  className="input-image-link"
-                  placeholder="Image Link"
-                  value={comic.imgURL}
-                  name="imgURL"
-                  required
-                  onChange={handleChange}
-                />
+              <div className='editor-text'> Image Source </div>
+              <input
+                className="input-image-link"
+                placeholder="Image Link"
+                value={comic.imgURL}
+                name="imgURL"
+                required
+                onChange={handleChange}
+              />
 
               <div className='editor-text'> Price </div>
               <input
@@ -110,12 +109,12 @@ export default function ComicEdit(props) {
               <button type="submit" className="save-button">
                 Save Edits
               </button>
-          </form>
-            </div>
-            
+            </form>
+          </div>
+
 
         </div>
-        
+
       </div>
     </Layout>
   );

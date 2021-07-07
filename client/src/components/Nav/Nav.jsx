@@ -5,7 +5,6 @@ import { Logout } from "../../screens/Logout/Logout";
 import { useState } from "react";
 
 const Nav = ({ user }) => {
-
   const [menu, setMenu] = useState('closed');
 
   const handleChange = () => {
@@ -20,19 +19,19 @@ const Nav = ({ user }) => {
     <nav>
       <div className="nav-div">
         <div className="logo-holder">
-          <NavLink  to="/"><h2 className="logo">AKEA COMICS</h2></NavLink>
+          <NavLink to="/"><h2 className="logo">AKEA COMICS</h2></NavLink>
         </div>
-        
+
         <div className='drop-down-menu'>
-          <i className="fas fa-bars" onClick={handleChange}/>
+          <i className="fas fa-bars" onClick={handleChange} />
           <div className={`drop-down-menu-${menu}`}>
-          <a href='/' className={`drop-down-menu-links`} >Home</a>
-          <a href='/comics' className={`drop-down-menu-links`} >Browse</a>
-          <a href='/login' className={`drop-down-menu-links`} >Login</a>
-          <a href='/signup' className={`drop-down-menu-links`}>Sign Up</a>
+            <a href='/' className={`drop-down-menu-links`} >Home</a>
+            <a href='/comics' className={`drop-down-menu-links`} >Browse</a>
+            <a href='/login' className={`drop-down-menu-links`} >Login</a>
+            <a href='/signup' className={`drop-down-menu-links`}>Sign Up</a>
           </div>
         </div>
-        
+
         <div className="link-holder">
           <NavLink className="nav-link" to="/comics">
             Browse
@@ -57,15 +56,15 @@ const Nav = ({ user }) => {
           )}
           {user ? (
             `Welcome ${user.username}!`
-          ): (
+          ) : (
             <NavLink className="nav-link" to="/signup">
               Sign Up
             </NavLink>
           )}
           {user ? (
             <NavLink user={user} className="nav-link" to="/change-password">
-            Change Password
-          </NavLink>            
+              Change Password
+            </NavLink>
           ) : (
             null
           )}

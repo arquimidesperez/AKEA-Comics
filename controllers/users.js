@@ -18,7 +18,7 @@ export const signUp = async (req, res) => {
     const user = new User({
       username,
       email,
-      password_digest,
+      password_digest
     });
 
     await user.save();
@@ -27,6 +27,7 @@ export const signUp = async (req, res) => {
       id: user._id,
       username: user.username,
       email: user.email,
+      wishlist: user.wishlist,
       exp: parseInt(exp.getTime() / 1000),
     };
 
@@ -42,13 +43,14 @@ export const signIn = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email: email }).select(
-      "username email roles password_digest"
+      "username email roles password_digest wishlist"
     );
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         id: user._id,
         username: user.username,
         email: user.email,
+        wishlist: user.wishlist,
         exp: parseInt(exp.getTime() / 1000),
       };
 
@@ -104,7 +106,9 @@ export const changePassword = async (req, res) => {
 
 export const getUserWishlist = async (req, res) => {
   try {
+    console.log(req.params.id)
     const user = await User.findById(req.params.id).populate('wishlist')
+    console.log(user)
     res.json(user)
   } catch (error) {
     console.log(error.message)

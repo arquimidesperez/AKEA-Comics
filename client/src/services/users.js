@@ -50,7 +50,7 @@ export const changePassword = async (data) => {
   }
 };
 
-export const getUserWishlist = async (userId, comicId) => {
+export const getUserWishlist = async (userId) => {
   try {
     const response = await api.get(`/users/${userId}/wishlist`)
     return response.data

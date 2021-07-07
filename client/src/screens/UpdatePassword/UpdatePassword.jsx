@@ -24,8 +24,8 @@ export default function UpdatePassword(props) {
       <div className='update-password-container'>
         <div className='update-password-form'>
 
-        <p className='update-form-header'>UPDATE PASSWORD</p>
-          
+          <p className='update-form-header'>UPDATE PASSWORD</p>
+
           <form onChange={handleChange} onSubmit={handleSubmit}>
 
             <div className='update-email-div'>
@@ -47,7 +47,7 @@ export default function UpdatePassword(props) {
                 name="newPassword" />
             </div>
             <button className='update-submit-div'>Update</button>
-        </form>
+          </form>
         </div>
       </div>
     </Layout>
