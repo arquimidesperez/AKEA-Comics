@@ -75,7 +75,7 @@
   }
   .carousel-image {
     width: 175vw;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     object-position: top;
   }
@@ -102,7 +102,7 @@
   }
   .carousel-image {
     width: auto;
-    height: 700px;
+    height: 600px;
     object-fit: cover;
     object-position: top;
   }
@@ -133,7 +133,7 @@
 @media only screen and (min-width: 1000px) {
 
   .carousel-image {
-    height: 800px;
+    height: 700px;
     object-fit: cover;
     object-position: top;
   }
