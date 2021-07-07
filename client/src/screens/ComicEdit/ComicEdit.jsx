@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import './ComicEdit.css'
 import { Layout } from "../../components";
 import { getComic, updateComic } from "../../services/comics";
 import { useParams, Redirect } from "react-router-dom";
+import { userContext } from "../../utils/Context";
+import SignUp from "../SignUp/SignUp";
 
 export default function ComicEdit(props) {
+  const user = useContext(userContext)
   const [comic, setComic] = useState({
     title: "",
     imgURL: "",
@@ -41,8 +44,10 @@ export default function ComicEdit(props) {
     return <Redirect to={`/comics/${id}`} />;
   }
 
-  return (
-    <Layout user={props.user}>
+  if (!user) {
+    return <SignUp />
+  } else return (
+    <Layout >
       <div className="comic-edit">
         <div className={comic.brand === 'Marvel' ? "editor-container marvel" : "editor-container dc"}>
           <img

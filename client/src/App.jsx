@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Home from "./screens/Home/Home";
 import ComicBrowse from "./screens/ComicBrowse/ComicBrowse";
 import ComicCreate from "./screens/ComicCreate/ComicCreate";
@@ -13,9 +13,11 @@ import Logout from "./screens/Logout/Logout";
 import Purchase from "./screens/Purchase/Purchase";
 import UpdatePassword from "./screens/UpdatePassword/UpdatePassword";
 import Wishlist from "./screens/Wishlist/Wishlist";
+import { userContext, setUserContext } from './utils/Context'
 
 const App = () => {
-  const [user, setUser] = useState();
+  const user = useContext(userContext);
+  const setUser = useContext(setUserContext);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -28,39 +30,17 @@ const App = () => {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/create-comic">
-          {user ? <ComicCreate user={user} /> : <Redirect to="/comics" />}
-        </Route>
-        <Route exact path="/comics/:id">
-          <ComicDetail user={user} />
-        </Route>
-        <Route exact path="/edit-comic/:id">
-          {user ? <ComicEdit user={user} /> : <Redirect to="/comics" />}
-        </Route>
-        <Route exact path="/comics">
-          <ComicBrowse user={user} />
-        </Route>
-        <Route exact path="/signup">
-          <SignUp setUser={setUser} />
-        </Route>
-        <Route exact path="/login">
-          <Login setUser={setUser} />
-        </Route>
-        <Route exact path="/logout">
-          <Logout setUser={setUser} />
-        </Route>
-        <Route exact path="/purchase/:id">
-          <Purchase user={user} />
-        </Route>
-        <Route exact path="/change-password">
-          <UpdatePassword setUser={setUser} user={user} />
-        </Route>
-        <Route exact path="/users/:id/wishlist">
-          <Wishlist user={user} />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/create-comic" component={ComicCreate} />
+        <Route exact path="/comics/:id" component={ComicDetail} />
+        <Route exact path="/edit-comic/:id" component={ComicEdit} />
+        <Route exact path="/comics" component={ComicBrowse} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/logout" component={Logout} />
+        <Route exact path="/purchase/:id" component={Purchase} />
+        <Route exact path="/change-password" component={UpdatePassword} />
+        <Route exact path="/users/:id/wishlist" component={Wishlist} />
       </Switch>
     </div>
   );

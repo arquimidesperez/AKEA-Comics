@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./ComicDetail.css";
 import { Layout } from "../../components";
 import { getComic, deleteComic } from "../../services/comics";
 import { addComicToWishlist } from "../../services/users";
 import { useParams, Link } from "react-router-dom";
+import { userContext } from '../../utils/Context'
 
 export default function ComicDetail(props) {
+  const user = useContext(userContext)
   const [comic, setComic] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
@@ -24,7 +26,7 @@ export default function ComicDetail(props) {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout >
       <div className="detail-container">
         {/* <div className='background-art-div'> */}
         <img className="background-art" src={comic.backgroundImage} alt={comic.title} />
@@ -45,10 +47,10 @@ export default function ComicDetail(props) {
               <div className="detail-description">{comic.description}</div>
             </div>
             <div className="detail-wishlist-add">
-              <button className="detail-wishlist-add-button" onClick={(() => addComicToWishlist(props.user.id, comic._id))} >Add to List</button>
+              <button className="detail-wishlist-add-button" onClick={(() => addComicToWishlist(user.id, comic._id))} >Add to List</button>
             </div>
             <div className="detail-wishlist-route">
-              <Link to={`/users/${props?.user?.id}/wishlist`} user={props?.user}>
+              <Link to={`/users/${user?.id}/wishlist`} user={user}>
                 <button className="detail-wishlist-route-button" >
                   Go to List
                   {/* <Redirect to={`/comics/`} /> */}

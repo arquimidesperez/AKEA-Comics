@@ -2,11 +2,12 @@ import "./Nav.css";
 import { NavLink } from "react-router-dom";
 // eslint-disable-next-line
 import { Logout } from "../../screens/Logout/Logout";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { userContext } from '../../utils/Context'
 
-const Nav = ({ user }) => {
+const Nav = () => {
   const [menu, setMenu] = useState('closed');
-
+  const user = useContext(userContext)
   const handleChange = () => {
     if (menu === 'closed') {
       setMenu('open');

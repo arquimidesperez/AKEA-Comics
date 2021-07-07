@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import './SignUp.css'
 import { signUp } from '../../services/users'
 import { useHistory, Link } from 'react-router-dom'
 import { Layout } from "../../components";
+import { setUserContext } from '../../utils/Context';
 
-const SignUp = (props) => {
-  //can be changed to a redirect 
+const SignUp = () => {
+  const setUser = useContext(setUserContext)
   const history = useHistory()
 
   const [form, setForm] = useState({
@@ -27,8 +28,6 @@ const SignUp = (props) => {
 
   const onSignUp = async (event) => {
     event.preventDefault()
-    //sets user to be a props from App.jsx
-    const { setUser } = props
     try {
       const user = await signUp(form)
       setUser(user)
@@ -64,65 +63,65 @@ const SignUp = (props) => {
 
   return (
     <Layout>
-    <div className='signup-container'>
+      <div className='signup-container'>
 
-      <div className='signup-form'>
+        <div className='signup-form'>
 
-        <p className='signup-form-header'>SIGN UP</p>
+          <p className='signup-form-header'>SIGN UP</p>
 
-        <form onSubmit={onSignUp}>
+          <form onSubmit={onSignUp}>
 
-          <div className='signup-username-div'>
-            <input className='signup-username-input'
-              required
-              type='text'
-              name='username'
-              value={username}
-              placeholder='Username'
-              onChange={handleChange}
-            />
-          </div>
+            <div className='signup-username-div'>
+              <input className='signup-username-input'
+                required
+                type='text'
+                name='username'
+                value={username}
+                placeholder='Username'
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='signup-email-div'>
-          <input className='signup-email-input'
-            required
-            type='email'
-            name='email'
-            value={email}
-            placeholder='Email'
-            onChange={handleChange}
-            />
-          </div>
+            <div className='signup-email-div'>
+              <input className='signup-email-input'
+                required
+                type='email'
+                name='email'
+                value={email}
+                placeholder='Email'
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='signup-password-div'>
-          <input className='signup-password-input'
-            required
-            name='password'
-            value={password}
-            type='password'
-            placeholder='Password'
-            onChange={handleChange}
-          />
-          </div>
+            <div className='signup-password-div'>
+              <input className='signup-password-input'
+                required
+                name='password'
+                value={password}
+                type='password'
+                placeholder='Password'
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className='confirm-password-div'>
-          <input className='confirm-password-input'
-            required
-            name='passwordConfirmation'
-            value={passwordConfirmation}
-            type='password'
-            placeholder='Confirm Password'
-            onChange={handleChange}
-          />
-          </div>
-          {renderError()}
+            <div className='confirm-password-div'>
+              <input className='confirm-password-input'
+                required
+                name='passwordConfirmation'
+                value={passwordConfirmation}
+                type='password'
+                placeholder='Confirm Password'
+                onChange={handleChange}
+              />
+            </div>
+            {renderError()}
 
-          <p className='account-ask'>Already have an account?</p>
-        <button className='signup-login-button'>
-          <Link className='signup-to-login-link' to='/login'>Login</Link>
-        </button>
-        </form>
-      </div>
+            <p className='account-ask'>Already have an account?</p>
+            <button className='signup-login-button'>
+              <Link className='signup-to-login-link' to='/login'>Login</Link>
+            </button>
+          </form>
+        </div>
       </div>
     </Layout>
   )

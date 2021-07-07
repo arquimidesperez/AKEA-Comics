@@ -6,14 +6,13 @@ import "./ComicBrowse.css";
 import Carousel from "../../components/Carousel/Carousel";
 import { CarouselData } from "../../components/Carousel/CarouselData";
 
-const ComicBrowse = (props) => {
+const ComicBrowse = () => {
   const [apiData, setApiData] = useState([]);
   const [comics, setComics] = useState([]);
 
   useEffect(() => {
     const fetchComics = async () => {
       const allComics = await getAllComics();
-      console.log(allComics);
       setApiData(allComics);
       setComics(allComics);
     };
@@ -33,39 +32,39 @@ const ComicBrowse = (props) => {
 
   return (
     <>
-    <Layout user={props.user}>
-      <div className="carousel-container">
-        <Carousel  covers={CarouselData}/>
-      </div> 
-      <div className='sort-container'>
-        <form className="sort" onChange={handleChange}>
-          <label>Filter: </label>
-          <select>
-            <option value="All">All Comics</option>
-            <option value="Marvel">Marvel</option>
-            <option value="DC">DC</option>
-          </select>
-        </form>
-      </div>
+      <Layout >
+        <div className="carousel-container">
+          <Carousel covers={CarouselData} />
+        </div>
+        <div className='sort-container'>
+          <form className="sort" onChange={handleChange}>
+            <label>Filter: </label>
+            <select>
+              <option value="All">All Comics</option>
+              <option value="Marvel">Marvel</option>
+              <option value="DC">DC</option>
+            </select>
+          </form>
+        </div>
 
-      <div className="comics-card">
-        {comics.map((comic, index) => {
-          return (
-            <ComicCards
-              _id={comic._id}
-              title={comic.title}
-              imgURL={comic.imgURL}
-              price={comic.price}
-              brand={comic.brand}
-              description={comic.description}
-              key={index}
-            />
-          );
-        })}
-      </div>
+        <div className="comics-card">
+          {comics.map((comic, index) => {
+            return (
+              <ComicCards
+                _id={comic._id}
+                title={comic.title}
+                imgURL={comic.imgURL}
+                price={comic.price}
+                brand={comic.brand}
+                description={comic.description}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </Layout>
-     </>
-      );
+    </>
+  );
 
 };
 

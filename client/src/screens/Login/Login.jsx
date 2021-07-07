@@ -1,11 +1,13 @@
-import { useState } from 'react'
 import './Login.css'
-// import Nav from '../Nav/Nav'
 import { signIn } from '../../services/users'
 import { useHistory } from 'react-router-dom'
 import { Layout } from "../../components";
+import { useState, useContext } from "react";
+import { setUserContext } from '../../utils/Context'
 
-const Login = (props) => {
+
+const Login = () => {
+  const setUser = useContext(setUserContext)
   const history = useHistory()
 
   const [form, setForm] = useState({
@@ -24,7 +26,6 @@ const Login = (props) => {
 
   const onLogin = async (event) => {
     event.preventDefault()
-    const { setUser } = props
     try {
       const user = await signIn(form)
       setUser(user)

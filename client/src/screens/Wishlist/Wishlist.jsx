@@ -5,9 +5,8 @@ import { getUserWishlist, removeComicFromWishlist } from "../../services/users";
 import "./Wishlist.css";
 import { useParams } from 'react-router-dom';
 
-export default function Wishlist(props) {
+export default function Wishlist() {
   const { id } = useParams()
-  const { user } = props
   const [comics, setComics] = useState();
 
   useEffect(() => {
@@ -32,7 +31,7 @@ export default function Wishlist(props) {
 
   return (
     <>
-      <Layout user={props.user}>
+      <Layout >
         <div className="comics-card">
           {comics && comics.map((comic, index) => {
             return (
