@@ -62,6 +62,7 @@ const User = new Schema(
 - Styled more detailed with overlaping images
 - Carousel
 - Update Password
+- Filter Comics
 
 
 ## Project Schedule
