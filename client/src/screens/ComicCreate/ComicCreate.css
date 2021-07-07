@@ -84,7 +84,7 @@
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
 **/
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 
   .comic-create {
     background-image: url(https://cdn.wallpapersafari.com/12/66/KoreDc.jpg);

@@ -75,7 +75,7 @@
   MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY  MEDIA QUERY    
 **/
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 
   .login-form {
     display: flex;
