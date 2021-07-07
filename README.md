@@ -4,6 +4,9 @@
 
 AKEA-Comics is a mobile first web-app that allows comic book fans to browse an inventory of Marvel and DC comic books for sale. Once a user signs up for an account they will be given access to adding their own comic books for sale, along with editing and deleting their own posts.  Wishlist functionality will also be available to users.
 
+## Deployed Link
+[AKEA Comics](https://akea-comics.netlify.app/comics)
+
 ## Wireframes
 
 <a href='https://www.figma.com/file/gB4MT2PpxvD37yNjfYvO1H/Akea-Comics?node-id=4%3A2' rel="nofollow">Figma Screens</a>
