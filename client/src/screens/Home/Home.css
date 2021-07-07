@@ -73,7 +73,7 @@
   .landing-card {
     border: 2px solid black;
     width: 35vw;
-    height: 25vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     margin-top: 30vh;
