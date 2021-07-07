@@ -1,6 +1,31 @@
+.wishlist-background{
+  background-color: #202020;
+  margin-top: 50px;
+  /* padding-top: 30px; */
+  padding-bottom: 100px;
+  width: 100vw;
+}
+
 .wishlist-card {
   display: flex;
   flex-wrap: wrap;
   padding-top: 120px;
   padding-bottom: 70px;
+}
+
+@media only screen and (min-width: 800px) {
+  .wishlist-background{
+    background-color: #202020;
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100vw;
+  }
+  .wishlist-card {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0px auto;
+  }
 }

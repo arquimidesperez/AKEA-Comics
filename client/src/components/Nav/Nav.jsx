@@ -24,10 +24,24 @@ const Nav = () => {
         <div className='drop-down-menu'>
           <i className="fas fa-bars" onClick={handleChange} />
           <div className={`drop-down-menu-${menu}`}>
-            <a href='/' className={`drop-down-menu-links`} >Home</a>
-            <a href='/comics' className={`drop-down-menu-links`} >Browse</a>
-            <a href='/login' className={`drop-down-menu-links`} >Login</a>
-            <a href='/signup' className={`drop-down-menu-links`}>Sign Up</a>
+            <div>
+            <NavLink className="nav-link-mobile" to="/comics">Browse</NavLink>
+            </div>
+            <div>
+            {user ? (<NavLink className="nav-link-mobile" to="/create-comic">Create</NavLink>) : (<NavLink className="nav-link-mobile" to="/signup">Create</NavLink>)}
+            </div>
+            <div>
+            {user ? (<div className="nav-link-mobile">Welcome {user.username}</div>) : (<NavLink className="nav-link-mobile" to="/signup">Sign Up</NavLink>)}
+            </div>
+            <div>
+            {user ? (<NavLink user={user} className="nav-user-link" to="/change-password">Change Password</NavLink>) : (null)}
+            </div>
+            <div>
+            {user ? (<NavLink user={user} className="nav-user-link" to={`/users/${user?.id}/wishlist`}>Wishlist</NavLink>) : (null)}
+            </div>
+            <div>
+            {user ? (<NavLink className="nav-link-mobile" to="/logout">Logout</NavLink>) : (<NavLink className="nav-link-mobile" to="/login">Login</NavLink>)}
+            </div>
           </div>
         </div>
 
