@@ -16,6 +16,7 @@ import Wishlist from "./screens/Wishlist/Wishlist";
 import { userContext, setUserContext } from './utils/Context'
 
 const App = () => {
+  // eslint-disable-next-line
   const user = useContext(userContext);
   const setUser = useContext(setUserContext);
 
@@ -24,7 +25,9 @@ const App = () => {
       const user = await verifyUser();
       user ? setUser(user) : setUser(null);
     };
+      // eslint-disable-next-line
     fetchUser();
+      // eslint-disable-next-line
   }, []);
 
   return (
