@@ -12,13 +12,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .carousel-image {
   width: 165vw;
   margin-top: 70px;
-  
 }
 
 .carousel-message {
@@ -31,7 +29,7 @@
 .carousel-month {
   color: yellow;
   margin-top: 5px;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .carousel-name {
@@ -60,13 +58,13 @@
 }
 
 .cover {
-  opacity: 0;
-  transition-duration: 1sec ease;
+  opacity: 1;
+  transition-duration: 3s ease-out;
 }
 
 .cover-active {
-  opacity: 5;
-  transition-duration: 5sec;
+  opacity: 1;
+  transition-duration: 3s;
   transform: scale(0.5);
 }
 
@@ -80,9 +78,16 @@
     background-color: black;
     margin-top: 100px;
   }
-
+  .right-arrow {
+    position: absolute;
+    right: 7px;
+  }
+  .left-arrow {
+    position: absolute;
+    left: 7px;
+  }
   .carousel-image {
-    width: 150vw;
+    width: 180vw;
     height: 700px;
     object-fit: cover;
     object-position: top;
@@ -103,5 +108,30 @@
 
   .carousel-name {
     color: white;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .carousel-image {
+    width: 180vw;
+    height: 800px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .carousel-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 5rem;
+  }
+  .right-arrow {
+    position: absolute;
+    right: 3px;
+    font-size: 3rem;
+  }
+  .left-arrow {
+    position: absolute;
+    left: 3px;
+    font-size: 3rem;
   }
 }
