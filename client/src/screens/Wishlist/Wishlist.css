@@ -1,7 +1,7 @@
 .wishlist-background{
   background-color: #202020;
-  margin-top: 50px;
-  /* padding-top: 30px; */
+  margin-top: 100px;
+  padding-top: 30px;
   padding-bottom: 100px;
   width: 100vw;
 }
@@ -17,8 +17,8 @@
   .wishlist-background{
     background-color: #202020;
     margin-top: 100px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 330px;
     width: 100vw;
   }
   .wishlist-card {
