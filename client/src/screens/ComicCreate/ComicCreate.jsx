@@ -17,7 +17,8 @@ export default function ComicCreate() {
     description: '',
     imgURL: '',
     price: '',
-    brand: ''
+    brand: '',
+    backgroundImage: ''
   })
 
   const handleChange = (event) => {
@@ -79,6 +80,14 @@ export default function ComicCreate() {
             value={comic.brand}
             name='brand'
             required
+            onChange={handleChange}
+          />
+          <br />
+          <input
+            className='create-background-image'
+            placeholder='Background Image'
+            value={comic.backgroundImage}
+            name='background-image'
             onChange={handleChange}
           />
           <br />

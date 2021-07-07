@@ -50,6 +50,13 @@
   padding: 5px;
 }
 
+.create-background-image{
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
 .create-textarea-description {
   margin: 10px auto;
   width: 200px;
@@ -92,7 +99,7 @@
     margin: 0px auto;
     background-color: #cd352d;
     width: 35vw;
-    height: 70vh;
+    height: 75vh;
     padding: 25px 10px 25px 10px;
     box-shadow: 3px 3px 3px black;
   }
@@ -128,6 +135,13 @@
   }
 
   .create-input-brand {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-background-image{
     margin: 10px auto;
     width: 300px;
     font-size: 1.2rem;

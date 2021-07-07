@@ -14,10 +14,6 @@ export const getComic = async (req, res) => {
   try {
     const { id } = req.params;
     const comic = await Comic.findById(id);
-    // .populate('userId')
-    // working with authen and user model
-    // creating users, etc.
-    // layer of restrictions and access, for user comics
     if (comic) {
       return res.json(comic);
     }
