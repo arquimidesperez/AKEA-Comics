@@ -106,7 +106,7 @@ const User = new Schema(
 | CSS polished styling                 |    H     |      3hrs      |      3hrs      |     3hrs     |
 | Total                                |    H     |     87hrs      |     87hrs      |    87hrs     |
 
-## PostMVP
+## Post-MVP
 - Create a hamburger slide menu
 - Create wishlist for users to add to
 - Create modules for the sign-in/login forms
